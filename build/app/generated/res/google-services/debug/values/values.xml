@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">54461884644-ht118s2rtstb32qujhgkk0nk03g0lkil.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://stress-free-app-d0c31-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">54461884644</string>
+    <string name="google_api_key" translatable="false">AIzaSyANJ3iQZ7z8a9a38t23cvxCU_ASvSKSySA</string>
+    <string name="google_app_id" translatable="false">1:54461884644:android:46020b6bd154c916e524f1</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyANJ3iQZ7z8a9a38t23cvxCU_ASvSKSySA</string>
+    <string name="google_storage_bucket" translatable="false">stress-free-app-d0c31.appspot.com</string>
+    <string name="project_id" translatable="false">stress-free-app-d0c31</string>
+</resources>

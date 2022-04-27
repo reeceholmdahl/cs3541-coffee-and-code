@@ -1,0 +1,525 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:1:1-41:12
+INJECTED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:1:1-41:12
+INJECTED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:1:1-41:12
+INJECTED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:1:1-41:12
+MERGED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:1:1-41:12
+MERGED from [:just_audio] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/just_audio/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:firebase_auth] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_database] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_core] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:flutter_alarm_clock] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_alarm_clock/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:flutter_inappwebview] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-29:12
+MERGED from [:audio_service] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/audio_service/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:sqflite] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:path_provider_android] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/path_provider_android/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:audio_session] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/audio_session/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:video_player_android] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/video_player_android/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.multidex:multidex:2.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/1299f7b926273218e37d84d32e68839a/multidex-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/6f7f11862664ce8f9d03325e1fc5091b/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/4c2625ef86e8e39e7d5148de969b5195/jetified-window-1.0.0-beta04/AndroidManifest.xml:17:1-33:12
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7e223a4f4db15a3716945f607166d7c0/jetified-exoplayer-dash-2.15.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/094fe4f46c3415a226514d920621f34d/jetified-exoplayer-hls-2.15.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/6ff312be73032039311a351fd0ed0b22/jetified-exoplayer-smoothstreaming-2.15.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/cf56a7b7549ece639746ffebce89e3b4/jetified-exoplayer-core-2.15.0/AndroidManifest.xml:17:1-26:12
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:17:1-83:12
+MERGED from [com.google.firebase:firebase-database:20.0.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/2feefa99924de609b90874b323def810/jetified-firebase-database-20.0.3/AndroidManifest.xml:15:1-38:12
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/c7b242b74606b4865b31436f2f924deb/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta04] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/0a71e902605463ade9ffed5eb8ccfc03/jetified-firebase-appcheck-interop-16.0.0-beta04/AndroidManifest.xml:15:1-26:12
+MERGED from [com.google.firebase:firebase-common:20.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/360b4c891c473c3dccd9662267e6925a/jetified-firebase-common-20.0.0/AndroidManifest.xml:15:1-40:12
+MERGED from [androidx.webkit:webkit:1.4.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/8b1a79ecdaa96c2815815ad30aa89757/webkit-1.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.browser:browser:1.3.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/55fa92c501113b7f230da2a100537e47/browser-1.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/15bd9b68138ceea3ef66398be36fb628/appcompat-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/0d046f436b124cf22f44eb5614fc3334/swiperefreshlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media2:media2-session:1.1.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/8c24a7db6bd9f2b43b741fd123ed21e8/jetified-media2-session-1.1.3/AndroidManifest.xml:17:1-36:12
+MERGED from [androidx.media2:media2-common:1.1.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/00f2388c96918506bad1eea06736ccbb/jetified-media2-common-1.1.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.4.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/cdc70e18e13cc66d7146d236be215209/media-1.4.3/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/f5fbffcf8eb1a4ee467144f98f015c2e/jetified-play-services-auth-api-phone-17.4.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/08b8130d44ac952c723972178e180892/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/26c8418b8afef5fb39ef8107263014f5/jetified-firebase-database-collection-18.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/77bc4b71f7d9dae5aa02806c8f2fac0b/jetified-play-services-base-17.1.0/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/60d1fb5cfad42461bc8ae312c723df06/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:17.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/f7784895cdb4bce9433e3fdfd8f83637/jetified-play-services-basement-17.1.0/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/605291f18501bc3b40381d3a50d2aa0c/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/74568886aff4deee563565a64a22327b/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/b828165dc539b00c558f397e97360286/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/9397bb8a06cccf5d4a09ddc4a9077c29/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/2c96c800937404833ab929e0e7dcddba/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/c02927cc6486477ef66aaed3d3e91e29/jetified-activity-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/c480f29c401cbe93383cc138e4a6abdc/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/5049fb56c6677b8130b1cf875e09cdd9/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/0a6012e46c178f4722380fb0f63ae52a/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.6.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/09c2e8e43f54ed87976a2f18a3763751/core-1.6.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/e917252e51f4b8ca0f98442cb947d7d7/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/32d2ea9d8a07f71b4a154c4a4aab5646/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/9799b7f968b65afc6e29419365ddd83b/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/696784b4b1660c8ba5215d431789c99b/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/abd9bbebc06442f83ad5898eb447ba0c/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/8b8d6788c6b36013b89c28b4e1e3de93/jetified-exoplayer-extractor-2.15.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/bb0f7e073d885253d391fe731283fee9/jetified-exoplayer-common-2.15.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/bd3fac70d69f9af66b994718a91c813b/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/1c0e9e7e79fb63639d34bbba2bcaaf14/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/6f2af7e86d94b774296c5697503e99a1/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/bede94043ac23e76aac37ef86b785208/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/b5df26425706aa7787398968369730bb/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-components:17.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/fa73ec286a0850c60ecb5bc68d5d426a/jetified-firebase-components-17.0.0/AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/645db90477cd0406d0f1ec09bd4065b3/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/cc9713366b045cbbc9428478b43d122e/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
+INJECTED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:2:5-35
+		INJECTED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/debug/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:1:1-41:12
+		INJECTED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/debug/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:1:1-41:12
+		INJECTED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/debug/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:1:11-69
+application
+ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:3:4-40:19
+MERGED from [:firebase_auth] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_auth] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_database] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_database] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_core] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_core] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:flutter_inappwebview] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-27:19
+MERGED from [:flutter_inappwebview] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-27:19
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/4c2625ef86e8e39e7d5148de969b5195/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/4c2625ef86e8e39e7d5148de969b5195/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:26:5-81:19
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:26:5-81:19
+MERGED from [com.google.firebase:firebase-database:20.0.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/2feefa99924de609b90874b323def810/jetified-firebase-database-20.0.3/AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-database:20.0.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/2feefa99924de609b90874b323def810/jetified-firebase-database-20.0.3/AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/c7b242b74606b4865b31436f2f924deb/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/c7b242b74606b4865b31436f2f924deb/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta04] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/0a71e902605463ade9ffed5eb8ccfc03/jetified-firebase-appcheck-interop-16.0.0-beta04/AndroidManifest.xml:24:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta04] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/0a71e902605463ade9ffed5eb8ccfc03/jetified-firebase-appcheck-interop-16.0.0-beta04/AndroidManifest.xml:24:5-20
+MERGED from [com.google.firebase:firebase-common:20.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/360b4c891c473c3dccd9662267e6925a/jetified-firebase-common-20.0.0/AndroidManifest.xml:25:5-38:19
+MERGED from [com.google.firebase:firebase-common:20.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/360b4c891c473c3dccd9662267e6925a/jetified-firebase-common-20.0.0/AndroidManifest.xml:25:5-38:19
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/08b8130d44ac952c723972178e180892/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/08b8130d44ac952c723972178e180892/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/77bc4b71f7d9dae5aa02806c8f2fac0b/jetified-play-services-base-17.1.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/77bc4b71f7d9dae5aa02806c8f2fac0b/jetified-play-services-base-17.1.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/60d1fb5cfad42461bc8ae312c723df06/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/60d1fb5cfad42461bc8ae312c723df06/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/f7784895cdb4bce9433e3fdfd8f83637/jetified-play-services-basement-17.1.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/f7784895cdb4bce9433e3fdfd8f83637/jetified-play-services-basement-17.1.0/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.6.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/09c2e8e43f54ed87976a2f18a3763751/core-1.6.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.6.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/09c2e8e43f54ed87976a2f18a3763751/core-1.6.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/bd3fac70d69f9af66b994718a91c813b/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/bd3fac70d69f9af66b994718a91c813b/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.6.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/09c2e8e43f54ed87976a2f18a3763751/core-1.6.0/AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:4:9-33
+	android:icon
+		ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:5:9-43
+activity#com.example.firstapp.MainActivity
+ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:6:9-34:20
+	android:launchMode
+		ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:8:13-43
+	android:hardwareAccelerated
+		ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:11:13-47
+	android:windowSoftInputMode
+		ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:12:13-55
+	android:configChanges
+		ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:10:13-163
+	android:theme
+		ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:9:13-47
+	android:name
+		ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:7:13-41
+meta-data#io.flutter.embedding.android.NormalTheme
+ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:17:13-20:17
+	android:resource
+		ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:19:15-52
+	android:name
+		ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:18:15-70
+meta-data#io.flutter.embedding.android.SplashScreenDrawable
+ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:26:13-29:17
+	android:resource
+		ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:28:15-61
+	android:name
+		ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:27:15-79
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:30:13-33:29
+action#android.intent.action.MAIN
+ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:31:17-68
+	android:name
+		ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:31:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:32:17-76
+	android:name
+		ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:32:27-74
+meta-data#flutterEmbedding
+ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:37:9-39:33
+	android:value
+		ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:39:13-30
+	android:name
+		ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml:38:13-44
+uses-sdk
+INJECTED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml
+MERGED from [:just_audio] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/just_audio/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:just_audio] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/just_audio/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_database] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_database] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_alarm_clock] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_alarm_clock/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_alarm_clock] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_alarm_clock/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_inappwebview] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_inappwebview] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:audio_service] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/audio_service/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:audio_service] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/audio_service/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:sqflite] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:sqflite] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider_android] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/path_provider_android/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider_android] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/path_provider_android/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:audio_session] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/audio_session/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:audio_session] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/audio_session/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:video_player_android] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/video_player_android/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:video_player_android] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/video_player_android/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [androidx.multidex:multidex:2.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/1299f7b926273218e37d84d32e68839a/multidex-2.0.0/AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/1299f7b926273218e37d84d32e68839a/multidex-2.0.0/AndroidManifest.xml:20:5-43
+MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/6f7f11862664ce8f9d03325e1fc5091b/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/6f7f11862664ce8f9d03325e1fc5091b/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/4c2625ef86e8e39e7d5148de969b5195/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/4c2625ef86e8e39e7d5148de969b5195/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7e223a4f4db15a3716945f607166d7c0/jetified-exoplayer-dash-2.15.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7e223a4f4db15a3716945f607166d7c0/jetified-exoplayer-dash-2.15.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/094fe4f46c3415a226514d920621f34d/jetified-exoplayer-hls-2.15.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/094fe4f46c3415a226514d920621f34d/jetified-exoplayer-hls-2.15.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/6ff312be73032039311a351fd0ed0b22/jetified-exoplayer-smoothstreaming-2.15.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/6ff312be73032039311a351fd0ed0b22/jetified-exoplayer-smoothstreaming-2.15.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/cf56a7b7549ece639746ffebce89e3b4/jetified-exoplayer-core-2.15.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/cf56a7b7549ece639746ffebce89e3b4/jetified-exoplayer-core-2.15.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-database:20.0.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/2feefa99924de609b90874b323def810/jetified-firebase-database-20.0.3/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-database:20.0.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/2feefa99924de609b90874b323def810/jetified-firebase-database-20.0.3/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/c7b242b74606b4865b31436f2f924deb/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/c7b242b74606b4865b31436f2f924deb/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta04] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/0a71e902605463ade9ffed5eb8ccfc03/jetified-firebase-appcheck-interop-16.0.0-beta04/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta04] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/0a71e902605463ade9ffed5eb8ccfc03/jetified-firebase-appcheck-interop-16.0.0-beta04/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-common:20.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/360b4c891c473c3dccd9662267e6925a/jetified-firebase-common-20.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-common:20.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/360b4c891c473c3dccd9662267e6925a/jetified-firebase-common-20.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.webkit:webkit:1.4.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/8b1a79ecdaa96c2815815ad30aa89757/webkit-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.webkit:webkit:1.4.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/8b1a79ecdaa96c2815815ad30aa89757/webkit-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.3.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/55fa92c501113b7f230da2a100537e47/browser-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.3.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/55fa92c501113b7f230da2a100537e47/browser-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/15bd9b68138ceea3ef66398be36fb628/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/15bd9b68138ceea3ef66398be36fb628/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/0d046f436b124cf22f44eb5614fc3334/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/0d046f436b124cf22f44eb5614fc3334/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media2:media2-session:1.1.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/8c24a7db6bd9f2b43b741fd123ed21e8/jetified-media2-session-1.1.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media2:media2-session:1.1.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/8c24a7db6bd9f2b43b741fd123ed21e8/jetified-media2-session-1.1.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media2:media2-common:1.1.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/00f2388c96918506bad1eea06736ccbb/jetified-media2-common-1.1.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media2:media2-common:1.1.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/00f2388c96918506bad1eea06736ccbb/jetified-media2-common-1.1.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.4.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/cdc70e18e13cc66d7146d236be215209/media-1.4.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.4.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/cdc70e18e13cc66d7146d236be215209/media-1.4.3/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/f5fbffcf8eb1a4ee467144f98f015c2e/jetified-play-services-auth-api-phone-17.4.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/f5fbffcf8eb1a4ee467144f98f015c2e/jetified-play-services-auth-api-phone-17.4.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/08b8130d44ac952c723972178e180892/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/08b8130d44ac952c723972178e180892/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database-collection:18.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/26c8418b8afef5fb39ef8107263014f5/jetified-firebase-database-collection-18.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/26c8418b8afef5fb39ef8107263014f5/jetified-firebase-database-collection-18.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/77bc4b71f7d9dae5aa02806c8f2fac0b/jetified-play-services-base-17.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/77bc4b71f7d9dae5aa02806c8f2fac0b/jetified-play-services-base-17.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/60d1fb5cfad42461bc8ae312c723df06/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/60d1fb5cfad42461bc8ae312c723df06/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/f7784895cdb4bce9433e3fdfd8f83637/jetified-play-services-basement-17.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/f7784895cdb4bce9433e3fdfd8f83637/jetified-play-services-basement-17.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/605291f18501bc3b40381d3a50d2aa0c/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/605291f18501bc3b40381d3a50d2aa0c/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/74568886aff4deee563565a64a22327b/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/74568886aff4deee563565a64a22327b/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/b828165dc539b00c558f397e97360286/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/b828165dc539b00c558f397e97360286/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/9397bb8a06cccf5d4a09ddc4a9077c29/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/9397bb8a06cccf5d4a09ddc4a9077c29/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/2c96c800937404833ab929e0e7dcddba/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/2c96c800937404833ab929e0e7dcddba/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/c02927cc6486477ef66aaed3d3e91e29/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/c02927cc6486477ef66aaed3d3e91e29/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/c480f29c401cbe93383cc138e4a6abdc/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/c480f29c401cbe93383cc138e4a6abdc/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/5049fb56c6677b8130b1cf875e09cdd9/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/5049fb56c6677b8130b1cf875e09cdd9/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/0a6012e46c178f4722380fb0f63ae52a/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/0a6012e46c178f4722380fb0f63ae52a/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.6.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/09c2e8e43f54ed87976a2f18a3763751/core-1.6.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.6.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/09c2e8e43f54ed87976a2f18a3763751/core-1.6.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/e917252e51f4b8ca0f98442cb947d7d7/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/e917252e51f4b8ca0f98442cb947d7d7/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/32d2ea9d8a07f71b4a154c4a4aab5646/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/32d2ea9d8a07f71b4a154c4a4aab5646/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/9799b7f968b65afc6e29419365ddd83b/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/9799b7f968b65afc6e29419365ddd83b/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/696784b4b1660c8ba5215d431789c99b/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/696784b4b1660c8ba5215d431789c99b/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/abd9bbebc06442f83ad5898eb447ba0c/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/abd9bbebc06442f83ad5898eb447ba0c/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/8b8d6788c6b36013b89c28b4e1e3de93/jetified-exoplayer-extractor-2.15.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/8b8d6788c6b36013b89c28b4e1e3de93/jetified-exoplayer-extractor-2.15.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/bb0f7e073d885253d391fe731283fee9/jetified-exoplayer-common-2.15.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/bb0f7e073d885253d391fe731283fee9/jetified-exoplayer-common-2.15.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/bd3fac70d69f9af66b994718a91c813b/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/bd3fac70d69f9af66b994718a91c813b/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/1c0e9e7e79fb63639d34bbba2bcaaf14/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/1c0e9e7e79fb63639d34bbba2bcaaf14/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/6f2af7e86d94b774296c5697503e99a1/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/6f2af7e86d94b774296c5697503e99a1/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/bede94043ac23e76aac37ef86b785208/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/bede94043ac23e76aac37ef86b785208/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/b5df26425706aa7787398968369730bb/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/b5df26425706aa7787398968369730bb/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-components:17.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/fa73ec286a0850c60ecb5bc68d5d426a/jetified-firebase-components-17.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:17.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/fa73ec286a0850c60ecb5bc68d5d426a/jetified-firebase-components-17.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/645db90477cd0406d0f1ec09bd4065b3/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/645db90477cd0406d0f1ec09bd4065b3/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/cc9713366b045cbbc9428478b43d122e/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/cc9713366b045cbbc9428478b43d122e/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
+INJECTED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/debug/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/debug/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/debug/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/debug/AndroidManifest.xml:6:5-66
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-database:20.0.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/2feefa99924de609b90874b323def810/jetified-firebase-database-20.0.3/AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-database:20.0.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/2feefa99924de609b90874b323def810/jetified-firebase-database-20.0.3/AndroidManifest.xml:26:5-67
+	android:name
+		ADDED from /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/debug/AndroidManifest.xml:6:22-64
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [:firebase_auth] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_database] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_database] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:74:9-80:19
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:74:9-80:19
+MERGED from [com.google.firebase:firebase-database:20.0.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/2feefa99924de609b90874b323def810/jetified-firebase-database-20.0.3/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-database:20.0.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/2feefa99924de609b90874b323def810/jetified-firebase-database-20.0.3/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-common:20.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/360b4c891c473c3dccd9662267e6925a/jetified-firebase-common-20.0.0/AndroidManifest.xml:33:9-37:35
+MERGED from [com.google.firebase:firebase-common:20.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/360b4c891c473c3dccd9662267e6925a/jetified-firebase-common-20.0.0/AndroidManifest.xml:33:9-37:35
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:76:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:20.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/360b4c891c473c3dccd9662267e6925a/jetified-firebase-common-20.0.0/AndroidManifest.xml:37:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/360b4c891c473c3dccd9662267e6925a/jetified-firebase-common-20.0.0/AndroidManifest.xml:35:13-43
+	android:name
+		ADDED from [:firebase_auth] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar
+ADDED from [:firebase_auth] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_auth] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_auth] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_database] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_database] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_database] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-127
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
+ADDED from [:firebase_core] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_core] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_core] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
+uses-permission#com.android.alarm.permission.SET_ALARM
+ADDED from [:flutter_alarm_clock] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_alarm_clock/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-78
+	android:name
+		ADDED from [:flutter_alarm_clock] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_alarm_clock/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-75
+queries
+ADDED from [:flutter_inappwebview] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-11:15
+MERGED from [androidx.media2:media2-session:1.1.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/8c24a7db6bd9f2b43b741fd123ed21e8/jetified-media2-session-1.1.3/AndroidManifest.xml:24:5-34:15
+MERGED from [androidx.media2:media2-session:1.1.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/8c24a7db6bd9f2b43b741fd123ed21e8/jetified-media2-session-1.1.3/AndroidManifest.xml:24:5-34:15
+intent#action:name:android.support.customtabs.action.CustomTabsService
+ADDED from [:flutter_inappwebview] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-10:18
+action#android.support.customtabs.action.CustomTabsService
+ADDED from [:flutter_inappwebview] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-90
+	android:name
+		ADDED from [:flutter_inappwebview] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:9:21-87
+activity#com.pichillilorenzo.flutter_inappwebview.in_app_browser.InAppBrowserActivity
+ADDED from [:flutter_inappwebview] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:14:9-17:47
+	android:configChanges
+		ADDED from [:flutter_inappwebview] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-137
+	android:theme
+		ADDED from [:flutter_inappwebview] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-44
+	android:name
+		ADDED from [:flutter_inappwebview] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-104
+activity#com.pichillilorenzo.flutter_inappwebview.chrome_custom_tabs.ChromeCustomTabsActivity
+ADDED from [:flutter_inappwebview] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:18:9-20:55
+	android:theme
+		ADDED from [:flutter_inappwebview] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-52
+	android:name
+		ADDED from [:flutter_inappwebview] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-112
+receiver#com.pichillilorenzo.flutter_inappwebview.chrome_custom_tabs.ActionBroadcastReceiver
+ADDED from [:flutter_inappwebview] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:22:9-120
+	android:name
+		ADDED from [:flutter_inappwebview] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:22:19-117
+meta-data#io.flutter.embedded_views_preview
+ADDED from [:flutter_inappwebview] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:24:9-26:36
+	android:value
+		ADDED from [:flutter_inappwebview] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:26:13-33
+	android:name
+		ADDED from [:flutter_inappwebview] /Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/flutter_inappwebview/intermediates/library_manifest/debug/AndroidManifest.xml:25:13-61
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0-beta04] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/4c2625ef86e8e39e7d5148de969b5195/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/4c2625ef86e8e39e7d5148de969b5195/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/4c2625ef86e8e39e7d5148de969b5195/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0-beta04] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/4c2625ef86e8e39e7d5148de969b5195/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/4c2625ef86e8e39e7d5148de969b5195/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/4c2625ef86e8e39e7d5148de969b5195/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.exoplayer:exoplayer-core:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/cf56a7b7549ece639746ffebce89e3b4/jetified-exoplayer-core-2.15.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-database:20.0.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/2feefa99924de609b90874b323def810/jetified-firebase-database-20.0.3/AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-database:20.0.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/2feefa99924de609b90874b323def810/jetified-firebase-database-20.0.3/AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/bb0f7e073d885253d391fe731283fee9/jetified-exoplayer-common-2.15.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/bb0f7e073d885253d391fe731283fee9/jetified-exoplayer-common-2.15.0/AndroidManifest.xml:24:5-79
+	android:name
+		ADDED from [com.google.android.exoplayer:exoplayer-core:2.15.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/cf56a7b7549ece639746ffebce89e3b4/jetified-exoplayer-core-2.15.0/AndroidManifest.xml:24:22-76
+activity#com.google.firebase.auth.internal.GenericIdpActivity
+ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:27:9-44:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:29:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:31:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:30:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:32:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:28:13-80
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
+ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:33:13-43:29
+action#android.intent.action.VIEW
+ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:34:17-69
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:34:25-66
+category#android.intent.category.DEFAULT
+ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:36:17-76
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:36:27-73
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:37:17-78
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:37:27-75
+data
+ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:39:17-42:51
+	android:path
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:41:21-37
+	android:host
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:40:21-49
+	android:scheme
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:42:21-48
+activity#com.google.firebase.auth.internal.RecaptchaActivity
+ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:45:9-62:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:47:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:49:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:48:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:50:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:46:13-79
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
+ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:51:13-61:29
+service#com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService
+ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:64:9-73:19
+	android:enabled
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:66:13-35
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:67:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:65:13-101
+intent-filter#action:name:com.google.firebase.auth.api.gms.service.START+category:name:android.intent.category.DEFAULT
+ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:68:13-72:29
+action#com.google.firebase.auth.api.gms.service.START
+ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:69:17-89
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:69:25-86
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:77:13-79:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:79:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/7a84c2b43b0a6cfba1000f1b2ff8669f/jetified-firebase-auth-21.0.1/AndroidManifest.xml:78:17-109
+meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
+ADDED from [com.google.firebase:firebase-database:20.0.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/2feefa99924de609b90874b323def810/jetified-firebase-database-20.0.3/AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database:20.0.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/2feefa99924de609b90874b323def810/jetified-firebase-database-20.0.3/AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-database:20.0.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/2feefa99924de609b90874b323def810/jetified-firebase-database-20.0.3/AndroidManifest.xml:33:17-109
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:20.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/360b4c891c473c3dccd9662267e6925a/jetified-firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:20.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/360b4c891c473c3dccd9662267e6925a/jetified-firebase-common-20.0.0/AndroidManifest.xml:28:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:20.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/360b4c891c473c3dccd9662267e6925a/jetified-firebase-common-20.0.0/AndroidManifest.xml:30:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/360b4c891c473c3dccd9662267e6925a/jetified-firebase-common-20.0.0/AndroidManifest.xml:29:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:20.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/360b4c891c473c3dccd9662267e6925a/jetified-firebase-common-20.0.0/AndroidManifest.xml:31:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:20.0.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/360b4c891c473c3dccd9662267e6925a/jetified-firebase-common-20.0.0/AndroidManifest.xml:27:13-77
+intent#action:name:android.media.browse.MediaBrowserService
+ADDED from [androidx.media2:media2-session:1.1.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/8c24a7db6bd9f2b43b741fd123ed21e8/jetified-media2-session-1.1.3/AndroidManifest.xml:25:9-27:18
+action#android.media.browse.MediaBrowserService
+ADDED from [androidx.media2:media2-session:1.1.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/8c24a7db6bd9f2b43b741fd123ed21e8/jetified-media2-session-1.1.3/AndroidManifest.xml:26:13-79
+	android:name
+		ADDED from [androidx.media2:media2-session:1.1.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/8c24a7db6bd9f2b43b741fd123ed21e8/jetified-media2-session-1.1.3/AndroidManifest.xml:26:21-76
+intent#action:name:androidx.media2.session.MediaSessionService
+ADDED from [androidx.media2:media2-session:1.1.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/8c24a7db6bd9f2b43b741fd123ed21e8/jetified-media2-session-1.1.3/AndroidManifest.xml:28:9-30:18
+action#androidx.media2.session.MediaSessionService
+ADDED from [androidx.media2:media2-session:1.1.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/8c24a7db6bd9f2b43b741fd123ed21e8/jetified-media2-session-1.1.3/AndroidManifest.xml:29:13-82
+	android:name
+		ADDED from [androidx.media2:media2-session:1.1.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/8c24a7db6bd9f2b43b741fd123ed21e8/jetified-media2-session-1.1.3/AndroidManifest.xml:29:21-79
+intent#action:name:androidx.media2.session.MediaLibraryService
+ADDED from [androidx.media2:media2-session:1.1.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/8c24a7db6bd9f2b43b741fd123ed21e8/jetified-media2-session-1.1.3/AndroidManifest.xml:31:9-33:18
+action#androidx.media2.session.MediaLibraryService
+ADDED from [androidx.media2:media2-session:1.1.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/8c24a7db6bd9f2b43b741fd123ed21e8/jetified-media2-session-1.1.3/AndroidManifest.xml:32:13-82
+	android:name
+		ADDED from [androidx.media2:media2-session:1.1.3] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/8c24a7db6bd9f2b43b741fd123ed21e8/jetified-media2-session-1.1.3/AndroidManifest.xml:32:21-79
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/77bc4b71f7d9dae5aa02806c8f2fac0b/jetified-play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/77bc4b71f7d9dae5aa02806c8f2fac0b/jetified-play-services-base-17.1.0/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/77bc4b71f7d9dae5aa02806c8f2fac0b/jetified-play-services-base-17.1.0/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/77bc4b71f7d9dae5aa02806c8f2fac0b/jetified-play-services-base-17.1.0/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/f7784895cdb4bce9433e3fdfd8f83637/jetified-play-services-basement-17.1.0/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/f7784895cdb4bce9433e3fdfd8f83637/jetified-play-services-basement-17.1.0/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.1.0] /Users/vicclab/.gradle/caches/transforms-2/files-2.1/f7784895cdb4bce9433e3fdfd8f83637/jetified-play-services-basement-17.1.0/AndroidManifest.xml:24:13-58
