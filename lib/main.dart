@@ -8,9 +8,8 @@ import 'package:flutter/services.dart';
 
 import 'alarms.dart';
 import 'informatics.dart';
-import 'planner/planner.dart';
 import 'pressable_card.dart';
-import 'tip_of_the_day.dart';
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -62,26 +61,6 @@ class Home extends StatelessWidget {
         body: Builder(builder: (context) {
           return ListView(
             children: [
-              PageCard(
-                name: 'Tip of the Day',
-                color: Colors.teal.shade400,
-                onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute<void>(
-                    builder: (context) => TipOfTheDay(),
-                  ),
-                ),
-              ),
-              PageCard(
-                name: 'Planner',
-                color: Colors.pink.shade400,
-                onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute<void>(
-                    builder: (context) => Planner(),
-                  ),
-                ),
-              ),
               PageCard(
                 name: 'Informatics',
                 color: Colors.cyan.shade400,
