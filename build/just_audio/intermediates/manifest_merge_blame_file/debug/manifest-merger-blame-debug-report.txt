@@ -3,6 +3,6 @@
 3    package="com.ryanheise.just_audio" >
 4
 5    <uses-sdk android:minSdkVersion="16" />
-5-->/Users/vicclab/Development/Classes/SoftwareEngineering/flutter/.pub-cache/hosted/pub.dartlang.org/just_audio-0.9.20/android/src/main/AndroidManifest.xml
+5-->C:\Users\joe55\Desktop\flutter-sdk\flutter\.pub-cache\hosted\pub.dartlang.org\just_audio-0.9.20\android\src\main\AndroidManifest.xml
 6
 7</manifest>

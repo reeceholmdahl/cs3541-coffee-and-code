@@ -1,17 +1,17 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "C:\\Users\\joe55\\Desktop\\GroupFinal\\cofeeandcode\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/android/app/src/main/res/values-night/styles.xml",
+                    "source": "C:\\Users\\joe55\\Desktop\\GroupFinal\\cofeeandcode\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
-                        "startOffsets": "172,815",
+                        "startOffsets": "175,829",
                         "endLines": "7,16",
                         "endColumns": "12,12",
-                        "endOffsets": "464,979"
+                        "endOffsets": "471,995"
                     },
                     "to": {
                         "startLines": "2,7",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/vicclab/.gradle/caches/transforms-2/files-2.1/15bd9b68138ceea3ef66398be36fb628/appcompat-1.2.0/res/values-night-v8/values-night-v8.xml",
+                    "source": "C:\\Users\\joe55\\.gradle\\caches\\transforms-2\\files-2.1\\15bd9b68138ceea3ef66398be36fb628\\appcompat-1.2.0\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
