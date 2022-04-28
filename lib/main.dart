@@ -1,7 +1,6 @@
 import 'dart:core';
 
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firstapp/Music/music.dart';
 import 'package:firstapp/side_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -78,16 +77,6 @@ class Home extends StatelessWidget {
                   context,
                   MaterialPageRoute<void>(
                     builder: (context) => Alarms(),
-                  ),
-                ),
-              ),
-              PageCard(
-                name: 'Soothing Music',
-                color: Colors.indigo.shade400,
-                onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute<void>(
-                    builder: (context) => SoothingMusic(),
                   ),
                 ),
               ),
