@@ -1,7 +1,7 @@
 import 'package:firstapp/journal/journal.dart';
 import 'package:firstapp/main.dart';
 import 'package:firstapp/stress_management/stress_management.dart';
-import 'package:firstapp/stress_release_videos/youtube_stress.dart';
+import 'package:firstapp/stress_release_videos/video_list.dart';
 import 'package:flutter/material.dart';
 import 'package:firstapp/self_care/self_care.dart';
 
@@ -58,7 +58,7 @@ class SideDrawer extends StatelessWidget {
               Navigator.push<void>(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => YoutubeStressPage(),
+                  builder: (context) => VideoList(),
                 ),
               );
             },
