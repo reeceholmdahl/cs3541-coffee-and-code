@@ -1,9 +1,9 @@
-#Tue Apr 26 14:13:58 CDT 2022
-base.2=/Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/app/intermediates/dex/debug/mergeDexDebug/classes3.dex
+#Thu Apr 28 15:53:22 CDT 2022
+base.2=C\:\\Users\\joe55\\Desktop\\GroupFinal\\cofeeandcode\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes3.dex
 path.2=classes3.dex
-base.1=/Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/app/intermediates/dex/debug/mergeDexDebug/classes2.dex
+base.1=C\:\\Users\\joe55\\Desktop\\GroupFinal\\cofeeandcode\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex
 path.1=classes2.dex
-base.0=/Users/vicclab/Development/Classes/SoftwareEngineering/finalProject/StressFree/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+base.0=C\:\\Users\\joe55\\Desktop\\GroupFinal\\cofeeandcode\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex

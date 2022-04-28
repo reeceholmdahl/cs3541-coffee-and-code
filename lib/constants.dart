@@ -6,6 +6,7 @@ import 'package:firstapp/model/planned_activity.dart';
 import 'model/activity.dart';
 import 'model/mood.dart';
 import 'model/technique.dart';
+import 'model/temp.dart';
 
 // TODO eventually all these these should be moved to the database as the user can add their own custom presets and categories
 
@@ -136,6 +137,27 @@ const List<Mood> MoodsList = const [
   _Medium,
   _Good,
   _Great,
+];
+
+const _NullTemp =
+  const Temp(_nullName, Colors.grey, Icons.do_not_disturb_on_total_silence);
+const _Hot = const Temp('Hot', Colors.red, Icons.whatshot_rounded);
+const _Iced = const Temp('Iced', Colors.blue, Icons.snowing);
+
+@immutable
+class _TempsType {
+  const _TempsType();
+
+  final Null = _NullTemp;
+  final Hot = _Hot;
+  final Cold = _Iced;
+}
+
+const Temps = const _TempsType();
+
+const List<Temp> TempList = const [
+  _Hot,
+  _Iced,
 ];
 
 const List<Technique> TechniquesList = const [

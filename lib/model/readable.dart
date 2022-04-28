@@ -6,10 +6,14 @@ class Readable {
   final String title;
   final String content;
   final MaterialColor color;
+  final String ingredient;
+  final IconData tempicon;
 
   const Readable(
       {required this.icon,
       required this.title,
       required this.content,
-      required this.color});
+      required this.color,
+        required this.ingredient,
+        required this.tempicon});
 }

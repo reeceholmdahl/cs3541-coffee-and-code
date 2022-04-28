@@ -19,10 +19,10 @@ com/ryanheise/audioservice/AudioService.java
  com.ryanheise.audioservice.AudioService$3
  com.ryanheise.audioservice.AudioService$MediaSessionCallback
  com.ryanheise.audioservice.AudioService$ServiceListener
-com/ryanheise/audioservice/MediaButtonReceiver.java
- com.ryanheise.audioservice.MediaButtonReceiver
 com/ryanheise/audioservice/MediaButton.java
  com.ryanheise.audioservice.MediaButton
+com/ryanheise/audioservice/MediaButtonReceiver.java
+ com.ryanheise.audioservice.MediaButtonReceiver
 com/ryanheise/audioservice/AudioServiceActivity.java
  com.ryanheise.audioservice.AudioServiceActivity
 com/ryanheise/audioservice/MediaControl.java

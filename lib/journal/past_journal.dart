@@ -17,6 +17,11 @@ class PastJournal extends StatelessWidget {
           color: Colors.white,
           size: 40.0,
         ),
+        Icon(
+          readable.tempicon,
+          color: Colors.white,
+          size: 40.0,
+        ),
         Container(
           width: 90.0,
           child: new Divider(color: Colors.green),
@@ -26,6 +31,10 @@ class PastJournal extends StatelessWidget {
           readable.title,
           style: TextStyle(color: Colors.white, fontSize: 45.0),
         ),
+        Text(
+          "\nIngredients: " + readable.ingredient,
+          style: TextStyle(color: Colors.white, fontSize: 20.0),
+        ),
         SizedBox(height: 30.0),
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -34,7 +43,7 @@ class PastJournal extends StatelessWidget {
     );
 
     final topContent = Container(
-      padding: EdgeInsets.fromLTRB(40, 0, 40, 40),
+      padding: EdgeInsets.fromLTRB(40, 0, 10, 10),
       decoration: BoxDecoration(color: readable.color),
       child: Center(
         child: topContentText,
