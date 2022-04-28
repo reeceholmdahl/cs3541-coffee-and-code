@@ -1,14 +1,457 @@
-import 'dart:math' as math;
-import 'dart:async';
 
-import 'package:firebase_database/firebase_database.dart';
-import 'package:firstapp/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:pie_chart/pie_chart.dart';
+import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:flutter_grid_button/flutter_grid_button.dart';
 
+import 'CoffeeDataFile.dart';
 import 'side_drawer.dart';
 
 enum LegendShape { Circle, Rectangle }
+
+class SimpleObject {
+  int data1;
+  int data2;
+
+  SimpleObject(this.data1, this.data2);
+
+  String toString() {
+    return data1.toString() + " " + data2.toString();
+  }
+}
+
+class GraphWidget extends StatefulWidget {
+  const GraphWidget({Key? key}) : super(key: key);
+
+  @override
+  _GraphWidgetState createState() => _GraphWidgetState();
+}
+
+var data = CoffeeData.coffeeData;
+
+class _GraphWidgetState extends State<GraphWidget> {
+  static List<String> getCoffeeTypes() {
+    List<String> toReturn = [];
+
+    for (CoffeeData entry in data) {
+      if (!toReturn.contains(entry.coffeeType)) toReturn.add(entry.coffeeType);
+    }
+
+    return toReturn;
+  }
+
+  static List<String> getCoffeeTimes() {
+    List<String> toReturn = [];
+
+    for (CoffeeData entry in data) {
+      if (!toReturn.contains(entry.coffeeTime)) toReturn.add(entry.coffeeTime);
+    }
+
+    return toReturn;
+  }
+
+  static int getCoffeeTimeCount(String coffeeTime) {
+    int count = 0;
+
+    for (CoffeeData entry in data) {
+      if (entry.coffeeTime == coffeeTime) {
+        count++;
+      }
+    }
+    return count;
+  }
+
+  static int getCoffeeTypeCount(String coffeeType) {
+    int count = 0;
+
+    for (CoffeeData entry in data) {
+      if (entry.coffeeType == coffeeType) {
+        count++;
+      }
+    }
+    return count;
+  }
+
+  static List<CoffeeData> coffeeTypeSearch(
+      String searchTerm, List<CoffeeData> data) {
+    List<CoffeeData> toReturn = [];
+
+    for (CoffeeData entry in data) {
+      if (entry.coffeeType == searchTerm) {
+        toReturn.add(entry);
+      }
+    }
+    return toReturn; //returns list of coffeeData with coffee types from search
+  }
+
+  static List<CoffeeData> coffeeTimeSearch(
+      String searchTerm, List<CoffeeData> data) {
+    List<CoffeeData> toReturn = [];
+
+    for (CoffeeData entry in data) {
+      if (entry.coffeeTime == searchTerm) {
+        toReturn.add(entry);
+      }
+    }
+    return toReturn; //returns list of coffeeData with coffee types from search
+  }
+
+  static List<CoffeeData> orderCoffeeCupsPerDay(
+      List<CoffeeData> data, String highToLow) {
+    List<SimpleObject> sortable = []; // map is id : coffeeCupsPerDay
+    List<CoffeeData> toReturn = [];
+
+    for (CoffeeData entry in data) {
+      sortable.add(SimpleObject(entry.id, entry.coffeeCupsPerDay));
+    }
+
+    Comparator<SimpleObject> com = (x, y) => x.data2.compareTo(y.data2);
+
+    sortable.sort(com); //this list is low to high
+
+    if (highToLow == "Sort High to Low")
+      sortable = new List.from(sortable.reversed);
+
+    for (int i = 0; i < data.length; ++i) {
+      toReturn.add(data.elementAt(sortable.elementAt(i).data1));
+    }
+
+    print(toReturn);
+
+    return toReturn; //returns list of coffeeData with coffee types from search
+  }
+
+  //cannot use sorting on already trimmed data, screws with indexing
+  static List<CoffeeData> orderCodingHours(
+      List<CoffeeData> data, String highToLow) {
+    List<SimpleObject> sortable = []; // map is id : coffeeCupsPerDay
+    List<CoffeeData> toReturn = [];
+
+    for (CoffeeData entry in data) {
+      sortable.add(SimpleObject(entry.id, entry.codingHours));
+    }
+
+    Comparator<SimpleObject> com = (x, y) => x.data2.compareTo(y.data2);
+
+    sortable.sort(com); //this list is low to high
+
+    if (highToLow == "Sort High to Low")
+      sortable = new List.from(sortable.reversed);
+
+    print(sortable);
+    print(data.length);
+
+    for (int i = 0; i < data.length; ++i) {
+      toReturn.add(data.elementAt(sortable.elementAt(i).data1));
+    }
+
+    print(toReturn);
+
+    return toReturn; //returns list of coffeeData with coffee types from search
+  }
+
+  static Container graphBuilder(List<charts.Series<CoffeeData, String>> series,
+      bool showLabel, String title, String leftAxis) {
+    final chart;
+
+    if (showLabel) {
+      chart = charts.BarChart(
+        series,
+        animate: true,
+        behaviors: [
+          new charts.ChartTitle(title,
+              behaviorPosition: charts.BehaviorPosition.top,
+              titleOutsideJustification: charts.OutsideJustification.start,
+              // Set a larger inner padding than the default (10) to avoid
+              // rendering the text too close to the top measure axis tick label.
+              // The top tick label may extend upwards into the top margin region
+              // if it is located at the top of the draw area.
+              innerPadding: 18),
+          new charts.ChartTitle(leftAxis,
+              behaviorPosition: charts.BehaviorPosition.start,
+              titleOutsideJustification:
+              charts.OutsideJustification.middleDrawArea),
+        ],
+      );
+    } else {
+      chart = charts.BarChart(series,
+          animate: true,
+          behaviors: [
+            new charts.ChartTitle(title,
+                behaviorPosition: charts.BehaviorPosition.top,
+                titleOutsideJustification: charts.OutsideJustification.start,
+                // Set a larger inner padding than the default (10) to avoid
+                // rendering the text too close to the top measure axis tick label.
+                // The top tick label may extend upwards into the top margin region
+                // if it is located at the top of the draw area.
+                innerPadding: 18),
+            new charts.ChartTitle(leftAxis,
+                behaviorPosition: charts.BehaviorPosition.start,
+                titleOutsideJustification:
+                charts.OutsideJustification.middleDrawArea),
+          ],
+          domainAxis: new charts.OrdinalAxisSpec(
+            // Make sure that we draw the domain axis line.
+              showAxisLine: true,
+              // But don't draw anything else.
+              renderSpec: new charts.NoneRenderSpec()));
+    }
+    return Container(
+      height: 400,
+      padding: EdgeInsets.all(20),
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: <Widget>[Expanded(child: chart)],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget build(BuildContext context) {
+    Container container = Container(
+      child: Column(
+        children: [
+          graphBuilder([
+            charts.Series<CoffeeData, String>(
+              id: "Test",
+              data: data,
+              domainFn: (CoffeeData series, _) => series.coffeeType,
+              measureFn: (CoffeeData series, _) => series.codingHours,
+              colorFn: (_, __) => charts.ColorUtil.fromDartColor(Colors.blue),
+            )
+          ], false, "Coding Hours for Coffee Types", "Number of Coding Hours")
+        ],
+      ),
+    );
+
+    return container;
+  }
+}
+
+class GraphWidgetCoffeeType extends StatefulWidget {
+  const GraphWidgetCoffeeType({Key? key}) : super(key: key);
+
+  @override
+  _GraphWidgetCoffeeTypeState createState() => _GraphWidgetCoffeeTypeState();
+}
+
+class _GraphWidgetCoffeeTypeState extends State<GraphWidgetCoffeeType> {
+  String dropdownValue = "Americano";
+
+  Widget build(BuildContext context) {
+    var button = DropdownButton<String>(
+      value: dropdownValue,
+      icon: const Icon(Icons.arrow_downward),
+      elevation: 16,
+      style: const TextStyle(color: Colors.deepPurple),
+      underline: Container(
+        height: 2,
+        color: Colors.deepPurpleAccent,
+      ),
+      onChanged: (String? newValue) {
+        setState(() {
+          dropdownValue = newValue!;
+        });
+      },
+      items: _GraphWidgetState.getCoffeeTypes()
+          .map<DropdownMenuItem<String>>((String value) {
+        return DropdownMenuItem<String>(
+          value: value,
+          child: Text(value),
+        );
+      }).toList(),
+    );
+
+    Container container = Container(
+      child: Column(
+        children: [
+          button,
+          _GraphWidgetState.graphBuilder([
+            charts.Series<CoffeeData, String>(
+              id: "Test",
+              data: _GraphWidgetState.coffeeTypeSearch(dropdownValue, data),
+              domainFn: (CoffeeData series, _) => series.coffeeType,
+              measureFn: (CoffeeData series, _) =>
+                  _GraphWidgetState.getCoffeeTypeCount(series.coffeeType),
+              colorFn: (_, __) => charts.ColorUtil.fromDartColor(Colors.blue),
+            )
+          ], true, "Coffee Types", "Number of Coffee Drinkers")
+        ],
+      ),
+    );
+
+    return container;
+  }
+}
+
+class GraphWidgetCoffeeTimes extends StatefulWidget {
+  const GraphWidgetCoffeeTimes({Key? key}) : super(key: key);
+
+  @override
+  _GraphWidgetCoffeeTimesState createState() => _GraphWidgetCoffeeTimesState();
+}
+
+class _GraphWidgetCoffeeTimesState extends State<GraphWidgetCoffeeTimes> {
+  String dropdownValue = "Before coding";
+
+  Widget build(BuildContext context) {
+    var button = DropdownButton<String>(
+      value: dropdownValue,
+      icon: const Icon(Icons.arrow_downward),
+      elevation: 16,
+      style: const TextStyle(color: Colors.deepPurple),
+      underline: Container(
+        height: 2,
+        color: Colors.deepPurpleAccent,
+      ),
+      onChanged: (String? newValue) {
+        setState(() {
+          dropdownValue = newValue!;
+        });
+      },
+      items: _GraphWidgetState.getCoffeeTimes()
+          .map<DropdownMenuItem<String>>((String value) {
+        return DropdownMenuItem<String>(
+          value: value,
+          child: Text(value),
+        );
+      }).toList(),
+    );
+
+    Container container = Container(
+      child: Column(
+        children: [
+          button,
+          _GraphWidgetState.graphBuilder([
+            charts.Series<CoffeeData, String>(
+              id: "Test",
+              data: _GraphWidgetState.coffeeTimeSearch(dropdownValue, data),
+              domainFn: (CoffeeData series, _) => series.coffeeTime,
+              measureFn: (CoffeeData series, _) =>
+                  _GraphWidgetState.getCoffeeTimeCount(series.coffeeTime),
+              colorFn: (_, __) => charts.ColorUtil.fromDartColor(Colors.blue),
+            )
+          ], true, "Coffee Times", "Number of Coffee Drinkers")
+        ],
+      ),
+    );
+
+    return container;
+  }
+}
+
+class GraphWidgetCoffeeCups extends StatefulWidget {
+  const GraphWidgetCoffeeCups({Key? key}) : super(key: key);
+
+  @override
+  _GraphWidgetCoffeeCupsState createState() => _GraphWidgetCoffeeCupsState();
+}
+
+class _GraphWidgetCoffeeCupsState extends State<GraphWidgetCoffeeCups> {
+  String dropdownValue = "Sort High to Low";
+
+  Widget build(BuildContext context) {
+    var button = DropdownButton<String>(
+      value: dropdownValue,
+      icon: const Icon(Icons.arrow_downward),
+      elevation: 16,
+      style: const TextStyle(color: Colors.deepPurple),
+      underline: Container(
+        height: 2,
+        color: Colors.deepPurpleAccent,
+      ),
+      onChanged: (String? newValue) {
+        setState(() {
+          dropdownValue = newValue!;
+        });
+      },
+      items: <String>["Sort High to Low", "Sort Low to High"]
+          .map<DropdownMenuItem<String>>((String value) {
+        return DropdownMenuItem<String>(
+          value: value,
+          child: Text(value),
+        );
+      }).toList(),
+    );
+
+    Container container = Container(
+      child: Column(
+        children: [
+          button,
+          _GraphWidgetState.graphBuilder([
+            charts.Series<CoffeeData, String>(
+              id: "Test",
+              data:
+              _GraphWidgetState.orderCoffeeCupsPerDay(data, dropdownValue),
+              domainFn: (CoffeeData series, _) => series.id.toString(),
+              measureFn: (CoffeeData series, _) => series.coffeeCupsPerDay,
+              colorFn: (_, __) => charts.ColorUtil.fromDartColor(Colors.blue),
+            )
+          ], false, "Coffee Cups per Day", "Number of Coffee Cups per Day"),
+        ],
+      ),
+    );
+
+    return container;
+  }
+}
+
+class GraphWidgetCodingHours extends StatefulWidget {
+  const GraphWidgetCodingHours({Key? key}) : super(key: key);
+
+  @override
+  _GraphWidgetCodingHoursState createState() => _GraphWidgetCodingHoursState();
+}
+
+class _GraphWidgetCodingHoursState extends State<GraphWidgetCodingHours> {
+  String dropdownValue = "Sort High to Low";
+
+  Widget build(BuildContext context) {
+    var button = DropdownButton<String>(
+      value: dropdownValue,
+      icon: const Icon(Icons.arrow_downward),
+      elevation: 16,
+      style: const TextStyle(color: Colors.deepPurple),
+      underline: Container(
+        height: 2,
+        color: Colors.deepPurpleAccent,
+      ),
+      onChanged: (String? newValue) {
+        setState(() {
+          dropdownValue = newValue!;
+        });
+      },
+      items: <String>["Sort High to Low", "Sort Low to High"]
+          .map<DropdownMenuItem<String>>((String value) {
+        return DropdownMenuItem<String>(
+          value: value,
+          child: Text(value),
+        );
+      }).toList(),
+    );
+
+    Container container = Container(
+      child: Column(
+        children: [
+          button,
+          _GraphWidgetState.graphBuilder([
+            charts.Series<CoffeeData, String>(
+              id: "Test",
+              data: _GraphWidgetState.orderCodingHours(data, dropdownValue),
+              domainFn: (CoffeeData series, _) => series.id.toString(),
+              measureFn: (CoffeeData series, _) => series.codingHours,
+              colorFn: (_, __) => charts.ColorUtil.fromDartColor(Colors.blue),
+            )
+          ], false, "Coding Hours", "Number of Coding Hours Per Day")
+        ],
+      ),
+    );
+
+    return container;
+  }
+}
 
 class Informatics extends StatefulWidget {
   const Informatics({Key? key}) : super(key: key);
@@ -18,257 +461,101 @@ class Informatics extends StatefulWidget {
 }
 
 class _InformaticsState extends State<Informatics> {
-  final dataMap = <String, double>{
-    "Great": 5,
-    "Good": 3,
-    "Medium": 2,
-    "Bad": 2,
-  };
+  late StatefulWidget graphWidget = GraphWidget();
 
-  Future<String> pullData() async {
-    final ref = FirebaseDatabase.instance.ref('Planner');
-    DatabaseEvent event = await ref.once();
-
-    String myString = event.snapshot.value.toString();
-
-    return myString;
-    //return event.snapshot.children.first.toString();
+  void _setGraphStateCoffeeType() {
+    setState(() {
+      graphWidget = GraphWidgetCoffeeType();
+    });
   }
 
-  String insertChar(String endString, int pos, String toInsert) {
-    endString = endString.substring(0, pos + 1) +
-        toInsert +
-        endString.substring(pos + 1);
-    return endString;
+  void _setGraphStateCoffeeTimes() {
+    setState(() {
+      graphWidget = GraphWidgetCoffeeTimes();
+    });
   }
 
-  static String skipOver(String endString, int pos, int newPos) {
-    endString =
-        endString.substring(0, pos + 1) + endString.substring(newPos + 1);
-    return endString;
+  void _setGraphStateCoffeeCups() {
+    setState(() {
+      graphWidget = GraphWidgetCoffeeCups();
+    });
   }
 
-  final colorList = <Color>[
-    Moods.Great.color,
-    Moods.Good.color,
-    Moods.Medium.color,
-    Moods.Bad.color,
-  ];
-
-  ChartType? _chartType = ChartType.disc;
-  bool _showCenterText = true;
-  double? _ringStrokeWidth = 32;
-  double? _chartLegendSpacing = 32;
-
-  bool _showLegendsInRow = false;
-  bool _showLegends = false;
-  bool _showLegendLabel = false;
-
-  bool _showChartValueBackground = true;
-  bool _showChartValues = true;
-  bool _showChartValuesInPercentage = false;
-  bool _showChartValuesOutside = false;
-
-  bool _showGradientColors = false;
-
-  LegendShape? _legendShape = LegendShape.Circle;
-  LegendPosition? _legendPosition = LegendPosition.right;
-
-  int key = 0;
-
-  String myString = "";
-
-  buildNewPopup(BuildContext context, String title, List<String> activityList) {
-    return showDialog(
-        context: context,
-        builder: (context) {
-          return Wrap(children: [
-            AlertDialog(
-              title: Text(title),
-              content: Column(
-                //mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "When you felt " + title + " you",
-                  ),
-                  Container(
-                      height: 200,
-                      width: 200,
-                      child: ListView.builder(
-                          itemCount: activityList.length,
-                          itemBuilder: (BuildContext context, int index) {
-                            return Text(
-                              activityList.elementAt(index),
-                            );
-                          }))
-                ],
-              ),
-              actions: <Widget>[],
-            )
-          ]);
-        }); //showDialog
+  void _setGraphStateCodingHours() {
+    setState(() {
+      graphWidget = GraphWidgetCodingHours();
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    //do action, maybe not needed for this application
-
-    //final dataMap = readDataFromFile();
+    const textStyle = TextStyle(fontSize: 26);
 
     return Scaffold(
-        drawer: SideDrawer(),
         appBar: AppBar(
-          title: const Text('Informatics'),
+          backgroundColor: Colors.red,
+          title: Text("Test"),
         ),
-        body: FutureBuilder(
-            future: pullData(),
-            builder: (context, AsyncSnapshot<String> snapshot) {
-              return Container(
-                child: Column(
-                  children: [
-                    Container(
-                      height: 300,
-                      child: PieChart(
-                        key: ValueKey(key),
-                        dataMap: getDataMap(snapshot.toString()),
-                        animationDuration: Duration(milliseconds: 800),
-                        chartLegendSpacing: _chartLegendSpacing!,
-                        chartRadius: math.min(
-                            MediaQuery.of(context).size.width / 2, 400),
-                        colorList: colorList,
-                        initialAngleInDegree: 0,
-                        chartType: _chartType!,
+        body: SingleChildScrollView(
+            child: Column(children: [
+              Container(
+                height: 300,
+                child: Builder(builder: (context) {
+                  return Padding(
+                    padding: const EdgeInsets.all(18.0),
+                    child: GridButton(
+                      textStyle: textStyle,
+                      borderColor: Colors.grey[300],
+                      borderWidth: 2,
+                      onPressed: (dynamic val) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text(val.toString()),
+                            duration: Duration(milliseconds: 400),
+                          ),
+                        );
 
-                        // legendLabels: _showLegendLabel ? legendLabels : {},
-
-                        chartValuesOptions: ChartValuesOptions(
-                          showChartValueBackground: _showChartValueBackground,
-                          showChartValues: _showChartValues,
-                          showChartValuesInPercentage:
-                              _showChartValuesInPercentage,
-                          showChartValuesOutside: _showChartValuesOutside,
-                        ),
-                        ringStrokeWidth: _ringStrokeWidth!,
-                        emptyColor: Colors.grey,
-                      ),
-                      margin: EdgeInsets.symmetric(
-                        vertical: 32,
-                      ),
+                        if (val == "See Coffee Types") {
+                          _setGraphStateCoffeeType();
+                        } else if (val == "See Coffee Times") {
+                          _setGraphStateCoffeeTimes();
+                        } else if (val == "CoffeeCupsPerDay") {
+                          _setGraphStateCoffeeCups();
+                        } else if (val == "CodingHoursPerDay") {
+                          _setGraphStateCodingHours();
+                        }
+                      },
+                      items: [
+                        [
+                          GridButtonItem(
+                            title: "See Coffee Types",
+                            color: Colors.black,
+                            textStyle: textStyle.copyWith(color: Colors.white),
+                          ),
+                          GridButtonItem(
+                            title: "See Coffee Times",
+                            color: Colors.red,
+                            textStyle: textStyle.copyWith(color: Colors.white),
+                          ),
+                        ],
+                        [
+                          GridButtonItem(
+                            title: "CoffeeCupsPerDay",
+                            color: Colors.blue,
+                            textStyle: textStyle.copyWith(color: Colors.white),
+                          ),
+                          GridButtonItem(
+                            title: "CodingHoursPerDay",
+                            color: Colors.green,
+                            textStyle: textStyle.copyWith(color: Colors.white),
+                          ),
+                        ],
+                      ],
                     ),
-                    Flexible(
-                      child: ListView.builder(
-                          padding: const EdgeInsets.all(8),
-                          itemCount: dataMap.length,
-                          itemBuilder: (BuildContext context, int index) {
-                            return TextButton(
-                              style: ButtonStyle(
-                                foregroundColor:
-                                    MaterialStateProperty.all<Color>(
-                                        colorList.elementAt(index)),
-                              ),
-                              onPressed: () {
-                                for (int i = 0; i < dataMap.length; ++i) {
-                                  if (index == i) {
-                                    buildNewPopup(
-                                        context,
-                                        dataMap.keys
-                                            .elementAt(index), //fix this
-                                        generateMoodActivityLists(
-                                                snapshot.toString())
-                                            .elementAt(i)); //very inefficient
-                                  }
-                                }
-                              },
-                              child: Center(
-                                  child:
-                                      Text('${dataMap.keys.elementAt(index)}')),
-                            );
-                          }),
-                    ),
-                  ],
-                ),
-              );
-            }));
-  }
-
-  Map<String, double> getDataMap(String myString) {
-    int numOfGood = 0;
-    int numOfBad = 0;
-    int numOfGreat = 0;
-    int numOfMedium = 0;
-
-    numOfGood = countInstance(myString, "Good");
-    numOfBad = countInstance(myString, "Bad");
-    numOfGreat = countInstance(myString, "Great");
-    numOfMedium = countInstance(myString, "Medium");
-
-    return <String, double>{
-      "Great": numOfGreat.toDouble(),
-      "Good": numOfGood.toDouble(),
-      "Medium": numOfMedium.toDouble(),
-      "Bad": numOfBad.toDouble(),
-    };
-  }
-
-  int countInstance(String data, String check) {
-    int count = 0;
-
-    for (int i = 0; i < data.length - check.length; ++i) {
-      if (data.substring(i, i + check.length) == check) {
-        count++;
-      }
-    }
-    return count;
-  }
-
-  List<List<String>> generateMoodActivityLists(String data) {
-    String theString = "";
-    List<String> list1 = [];
-    List<String> list2 = [];
-    List<String> list3 = [];
-    List<String> list4 = [];
-
-    int j = 0;
-
-    for (int i = 0; i < data.length; ++i) {
-      if (data[i] == '{') {
-        while (data[i + j] != '}') {
-          ++j;
-          if (data[i + j] == '{') {
-            j = 0;
-            break;
-          }
-        }
-
-        if (data[i + j] == '}') {
-          for (int k = i; k < i + j + 1; ++k) {
-            if (data.substring(k, k + 8) == "Activity") {
-              theString = data.substring(k + 10, i + j);
-
-              if (data.substring(i, i + j + 1).contains(": Great")) {
-                if (!list1.contains(theString)) list1.add(theString);
-              } else if (data.substring(i, i + j + 1).contains(": Good")) {
-                if (!list2.contains(theString)) list2.add(theString);
-              } else if (data.substring(i, i + j + 1).contains(": Medium")) {
-                if (!list3.contains(theString)) list3.add(theString);
-              } else if (data.substring(i, i + j + 1).contains(": Bad")) {
-                if (!list4.contains(theString)) list4.add(theString);
-              }
-
-              break;
-            }
-          }
-        }
-        j = 0;
-      }
-    }
-
-    List<List<String>> returnList = [];
-    returnList.add(list1);
-    returnList.add(list2);
-    returnList.add(list3);
-    returnList.add(list4);
-
-    return returnList;
+                  );
+                }),
+              ),
+              graphWidget
+            ])));
   }
 }
