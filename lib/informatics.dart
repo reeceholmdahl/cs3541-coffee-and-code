@@ -210,21 +210,7 @@ class _GraphWidgetState extends State<GraphWidget> {
   }
 
   Widget build(BuildContext context) {
-    Container container = Container(
-      child: Column(
-        children: [
-          graphBuilder([
-            charts.Series<CoffeeData, String>(
-              id: "Test",
-              data: data,
-              domainFn: (CoffeeData series, _) => series.coffeeType,
-              measureFn: (CoffeeData series, _) => series.codingHours,
-              colorFn: (_, __) => charts.ColorUtil.fromDartColor(Colors.blue),
-            )
-          ], false, "Coding Hours for Coffee Types", "Number of Coding Hours")
-        ],
-      ),
-    );
+    Container container = Container();
 
     return container;
   }
@@ -493,8 +479,8 @@ class _InformaticsState extends State<Informatics> {
 
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.red,
-          title: Text("Test"),
+          backgroundColor: Colors.brown,
+          title: Text("Database"),
         ),
         body: SingleChildScrollView(
             child: Column(children: [
@@ -515,38 +501,38 @@ class _InformaticsState extends State<Informatics> {
                           ),
                         );
 
-                        if (val == "See Coffee Types") {
+                        if (val == "Coffee Types") {
                           _setGraphStateCoffeeType();
-                        } else if (val == "See Coffee Times") {
+                        } else if (val == "Coffee Times") {
                           _setGraphStateCoffeeTimes();
-                        } else if (val == "CoffeeCupsPerDay") {
+                        } else if (val == "Coffee Cups Per Day") {
                           _setGraphStateCoffeeCups();
-                        } else if (val == "CodingHoursPerDay") {
+                        } else if (val == "Coding Hours Per Day") {
                           _setGraphStateCodingHours();
                         }
                       },
                       items: [
                         [
                           GridButtonItem(
-                            title: "See Coffee Types",
-                            color: Colors.black,
+                            title: "Coffee Types",
+                            color: Colors.brown[600],
                             textStyle: textStyle.copyWith(color: Colors.white),
                           ),
                           GridButtonItem(
-                            title: "See Coffee Times",
-                            color: Colors.red,
+                            title: "Coffee Times",
+                            color: Colors.brown[700],
                             textStyle: textStyle.copyWith(color: Colors.white),
                           ),
                         ],
                         [
                           GridButtonItem(
-                            title: "CoffeeCupsPerDay",
-                            color: Colors.blue,
+                            title: "Coffee Cups Per Day",
+                            color: Colors.brown[800],
                             textStyle: textStyle.copyWith(color: Colors.white),
                           ),
                           GridButtonItem(
-                            title: "CodingHoursPerDay",
-                            color: Colors.green,
+                            title: "Coding Hours Per Day",
+                            color: Colors.brown[900],
                             textStyle: textStyle.copyWith(color: Colors.white),
                           ),
                         ],
