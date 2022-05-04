@@ -279,10 +279,9 @@ class _GraphWidgetState extends State<GraphWidget> {
 
 
   static Container graphBuilderHistogram(List<charts.Series<SimpleObject, String>> series,
-      bool showLabel, String title, String leftAxis) {
+      String title, String leftAxis, String rightAxis) {
     final chart;
 
-    if (showLabel) {
       chart = charts.BarChart(
         series,
         animate: true,
@@ -299,31 +298,12 @@ class _GraphWidgetState extends State<GraphWidget> {
               behaviorPosition: charts.BehaviorPosition.start,
               titleOutsideJustification:
               charts.OutsideJustification.middleDrawArea),
+          new charts.ChartTitle(rightAxis,
+          behaviorPosition: charts.BehaviorPosition.bottom,
+          titleOutsideJustification: charts.OutsideJustification.middleDrawArea)
         ],
       );
-    } else {
-      chart = charts.BarChart(series,
-          animate: true,
-          behaviors: [
-            new charts.ChartTitle(title,
-                behaviorPosition: charts.BehaviorPosition.top,
-                titleOutsideJustification: charts.OutsideJustification.start,
-                // Set a larger inner padding than the default (10) to avoid
-                // rendering the text too close to the top measure axis tick label.
-                // The top tick label may extend upwards into the top margin region
-                // if it is located at the top of the draw area.
-                innerPadding: 18),
-            new charts.ChartTitle(leftAxis,
-                behaviorPosition: charts.BehaviorPosition.start,
-                titleOutsideJustification:
-                charts.OutsideJustification.middleDrawArea),
-          ],
-          domainAxis: new charts.OrdinalAxisSpec(
-            // Make sure that we draw the domain axis line.
-              showAxisLine: true,
-              // But don't draw anything else.
-              renderSpec: new charts.NoneRenderSpec()));
-    }
+
     return Container(
       height: 400,
       padding: EdgeInsets.all(20),
@@ -507,7 +487,7 @@ class _GraphWidgetCoffeeCupsState extends State<GraphWidgetCoffeeCups> {
               measureFn: (SimpleObject object, _) => object.data2,
               colorFn: (_, __) => charts.ColorUtil.fromDartColor(Colors.blue),
             )
-          ], true, "Frequency of Coffee Cups per Day", "Frequency")
+          ], "Frequency of Coffee Cups per Day", "Frequency", "Coffee Cups Per Day")
         ],
       ),
     );
@@ -565,7 +545,7 @@ class _GraphWidgetCodingHoursState extends State<GraphWidgetCodingHours> {
               measureFn: (SimpleObject object, _) => object.data2,
               colorFn: (_, __) => charts.ColorUtil.fromDartColor(Colors.blue),
             )
-          ], true, "Frequency of Coding Hours", "Frequency")
+          ], "Frequency of Coding Hours", "Frequency", "Coding Hours Per Day")
         ],
       ),
     );
