@@ -1,13 +1,18 @@
 import 'dart:core';
-
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firstapp/side_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'alarms.dart';
+import 'package:firstapp/journal/journal.dart';
+import 'package:firstapp/stress_management/stress_management.dart';
+import 'package:firstapp/stress_release_videos/video_list.dart';
+import 'package:firstapp/self_care/self_care.dart';
+
+import 'package:firstapp/side_drawer.dart';
+
 import 'informatics.dart';
 import 'pressable_card.dart';
+
 
 
 Future<void> main() async {
@@ -50,7 +55,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = makeTheme(context);
     return MaterialApp(
-      title: 'Stress Free',
+      title: 'CoffeeAndCode',
       theme: theme,
       home: Scaffold(
         appBar: AppBar(
@@ -61,7 +66,7 @@ class Home extends StatelessWidget {
           return ListView(
             children: [
               PageCard(
-                name: 'Informatics',
+                name: 'Coffee Informatics',
                 color: Colors.cyan.shade400,
                 onPressed: () => Navigator.push(
                   context,
@@ -71,12 +76,22 @@ class Home extends StatelessWidget {
                 ),
               ),
               PageCard(
-                name: 'Alarms',
+                name: 'Coffee/Code Journal',
                 color: Colors.yellow.shade400,
                 onPressed: () => Navigator.push(
                   context,
                   MaterialPageRoute<void>(
-                    builder: (context) => Alarms(),
+                    builder: (context) => const DailyJournal(),
+                  ),
+                ),
+              ),
+              PageCard(
+                name: 'Coffee Videos',
+                color: Colors.cyan.shade400,
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute<void>(
+                    builder: (context) => VideoList(),
                   ),
                 ),
               ),
