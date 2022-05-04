@@ -149,6 +149,73 @@ class _GraphWidgetState extends State<GraphWidget> {
     return toReturn; //returns list of coffeeData with coffee types from search
   }
 
+
+
+  static List<SimpleObject> getHistogramFrequenciesCoffeeCups(List<CoffeeData> data) {
+    List<SimpleObject> objects = [];
+
+    var domain = getHistogramDomainsCoffeeCups(data);
+
+    int count = 0;
+
+    for(int entry in domain) {
+      for(CoffeeData dataEntry  in data) {
+        if(dataEntry.coffeeCupsPerDay == entry) {
+          ++count;
+        }
+      }
+      //frequencies.add(count);
+      objects.add(SimpleObject(entry, count));
+      count = 0;
+    }
+
+    return objects;
+  }
+
+  static List<int> getHistogramDomainsCoffeeCups(List<CoffeeData> data) {
+    List<int> ids = [];
+
+    for(CoffeeData entry in data) {
+      if(!ids.contains(entry.coffeeCupsPerDay)) {
+        ids.add(entry.coffeeCupsPerDay);
+      }
+    }
+    return ids;
+  }
+
+
+  static List<SimpleObject> getHistogramFrequenciesCodingHours(List<CoffeeData> data) {
+    List<SimpleObject> objects = [];
+
+    var domain = getHistogramDomainsCodingHours(data);
+
+    int count = 0;
+
+    for(int entry in domain) {
+      for(CoffeeData dataEntry  in data) {
+        if(dataEntry.codingHours == entry) {
+          ++count;
+        }
+      }
+      //frequencies.add(count);
+      objects.add(SimpleObject(entry, count));
+      count = 0;
+    }
+
+    return objects;
+  }
+
+  static List<int> getHistogramDomainsCodingHours(List<CoffeeData> data) {
+    List<int> ids = [];
+
+    for(CoffeeData entry in data) {
+      if(!ids.contains(entry.codingHours)) {
+        ids.add(entry.codingHours);
+      }
+    }
+    return ids;
+  }
+
   static Container graphBuilder(List<charts.Series<CoffeeData, String>> series,
       bool showLabel, String title, String leftAxis) {
     final chart;
@@ -208,6 +275,68 @@ class _GraphWidgetState extends State<GraphWidget> {
       ),
     );
   }
+
+
+  static Container graphBuilderHistogram(List<charts.Series<SimpleObject, String>> series,
+      bool showLabel, String title, String leftAxis) {
+    final chart;
+
+    if (showLabel) {
+      chart = charts.BarChart(
+        series,
+        animate: true,
+        behaviors: [
+          new charts.ChartTitle(title,
+              behaviorPosition: charts.BehaviorPosition.top,
+              titleOutsideJustification: charts.OutsideJustification.start,
+              // Set a larger inner padding than the default (10) to avoid
+              // rendering the text too close to the top measure axis tick label.
+              // The top tick label may extend upwards into the top margin region
+              // if it is located at the top of the draw area.
+              innerPadding: 18),
+          new charts.ChartTitle(leftAxis,
+              behaviorPosition: charts.BehaviorPosition.start,
+              titleOutsideJustification:
+              charts.OutsideJustification.middleDrawArea),
+        ],
+      );
+    } else {
+      chart = charts.BarChart(series,
+          animate: true,
+          behaviors: [
+            new charts.ChartTitle(title,
+                behaviorPosition: charts.BehaviorPosition.top,
+                titleOutsideJustification: charts.OutsideJustification.start,
+                // Set a larger inner padding than the default (10) to avoid
+                // rendering the text too close to the top measure axis tick label.
+                // The top tick label may extend upwards into the top margin region
+                // if it is located at the top of the draw area.
+                innerPadding: 18),
+            new charts.ChartTitle(leftAxis,
+                behaviorPosition: charts.BehaviorPosition.start,
+                titleOutsideJustification:
+                charts.OutsideJustification.middleDrawArea),
+          ],
+          domainAxis: new charts.OrdinalAxisSpec(
+            // Make sure that we draw the domain axis line.
+              showAxisLine: true,
+              // But don't draw anything else.
+              renderSpec: new charts.NoneRenderSpec()));
+    }
+    return Container(
+      height: 400,
+      padding: EdgeInsets.all(20),
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: <Widget>[Expanded(child: chart)],
+          ),
+        ),
+      ),
+    );
+  }
+
 
   Widget build(BuildContext context) {
     Container container = Container();
@@ -362,20 +491,22 @@ class _GraphWidgetCoffeeCupsState extends State<GraphWidgetCoffeeCups> {
       }).toList(),
     );
 
+    List<SimpleObject> histData = _GraphWidgetState.getHistogramFrequenciesCoffeeCups(_GraphWidgetState.orderCoffeeCupsPerDay(data, dropdownValue));
+
+
     Container container = Container(
       child: Column(
         children: [
           button,
-          _GraphWidgetState.graphBuilder([
-            charts.Series<CoffeeData, String>(
+          _GraphWidgetState.graphBuilderHistogram([
+            charts.Series<SimpleObject, String>(
               id: "Test",
-              data:
-              _GraphWidgetState.orderCoffeeCupsPerDay(data, dropdownValue),
-              domainFn: (CoffeeData series, _) => series.id.toString(),
-              measureFn: (CoffeeData series, _) => series.coffeeCupsPerDay,
+              data: histData,
+              domainFn: (SimpleObject object, _) => object.data1.toString(),
+              measureFn: (SimpleObject object, _) => object.data2,
               colorFn: (_, __) => charts.ColorUtil.fromDartColor(Colors.blue),
             )
-          ], false, "Coffee Cups per Day", "Number of Coffee Cups per Day"),
+          ], true, "Coding Hours", "Number of Coding Hours Per Day")
         ],
       ),
     );
@@ -418,19 +549,22 @@ class _GraphWidgetCodingHoursState extends State<GraphWidgetCodingHours> {
       }).toList(),
     );
 
+     List<SimpleObject> histData = _GraphWidgetState.getHistogramFrequenciesCodingHours(_GraphWidgetState.orderCodingHours(data, dropdownValue));
+
+
     Container container = Container(
       child: Column(
         children: [
           button,
-          _GraphWidgetState.graphBuilder([
-            charts.Series<CoffeeData, String>(
+          _GraphWidgetState.graphBuilderHistogram([
+            charts.Series<SimpleObject, String>(
               id: "Test",
-              data: _GraphWidgetState.orderCodingHours(data, dropdownValue),
-              domainFn: (CoffeeData series, _) => series.id.toString(),
-              measureFn: (CoffeeData series, _) => series.codingHours,
+              data: histData,
+              domainFn: (SimpleObject object, _) => object.data1.toString(),
+              measureFn: (SimpleObject object, _) => object.data2,
               colorFn: (_, __) => charts.ColorUtil.fromDartColor(Colors.blue),
             )
-          ], false, "Coding Hours", "Number of Coding Hours Per Day")
+          ], true, "Coding Hours", "Number of Coding Hours Per Day")
         ],
       ),
     );
