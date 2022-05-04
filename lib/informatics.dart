@@ -1,4 +1,5 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter_grid_button/flutter_grid_button.dart';
@@ -506,7 +507,7 @@ class _GraphWidgetCoffeeCupsState extends State<GraphWidgetCoffeeCups> {
               measureFn: (SimpleObject object, _) => object.data2,
               colorFn: (_, __) => charts.ColorUtil.fromDartColor(Colors.blue),
             )
-          ], true, "Coding Hours", "Number of Coding Hours Per Day")
+          ], true, "Frequency of Coffee Cups per Day", "Frequency")
         ],
       ),
     );
@@ -564,7 +565,7 @@ class _GraphWidgetCodingHoursState extends State<GraphWidgetCodingHours> {
               measureFn: (SimpleObject object, _) => object.data2,
               colorFn: (_, __) => charts.ColorUtil.fromDartColor(Colors.blue),
             )
-          ], true, "Coding Hours", "Number of Coding Hours Per Day")
+          ], true, "Frequency of Coding Hours", "Frequency")
         ],
       ),
     );
