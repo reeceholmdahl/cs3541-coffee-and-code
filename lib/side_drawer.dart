@@ -4,7 +4,9 @@ import 'package:firstapp/stress_management/stress_management.dart';
 import 'package:firstapp/stress_release_videos/video_list.dart';
 import 'package:flutter/material.dart';
 import 'package:firstapp/self_care/self_care.dart';
+
 import 'package:firstapp/settings.dart';
+import 'package:firstapp/alarms.dart';
 
 class SideDrawer extends StatelessWidget {
   const SideDrawer({Key? key}) : super(key: key);
@@ -43,43 +45,11 @@ class SideDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text('Self Care Journal'),
-            onTap: () {
-              Navigator.pop(context);
-              Navigator.push<void>(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const DailyJournal()));
-            },
-          ),
-          ListTile(
-            title: const Text('Stress Release Videos'),
-            onTap: () {
-              Navigator.pop(context);
-              Navigator.push<void>(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => VideoList(),
-                ),
-              );
-            },
-          ),
-          ListTile(
-            title: const Text('Stress Management Techniques'),
-            onTap: () {
-              Navigator.pop(context);
-              Navigator.push<void>(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const StressManagement()));
-            },
-          ),
-          ListTile(
-            title: const Text('Self Care Ideas'),
+            title: const Text('Alarms'),
             onTap: () {
               Navigator.pop(context);
               Navigator.push<void>(context,
-                  MaterialPageRoute(builder: (context) => const SelfCare()));
+                  MaterialPageRoute(builder: (context) => const Alarms()));
             },
           ),
           ListTile(
