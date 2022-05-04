@@ -43,6 +43,8 @@ dependencies:
   just_audio: ^0.9.20
   just_audio_background: any
   intl: ^0.17.0
+  app_settings: ^4.1.6
+  csv: ^5.0.1
 
 dev_dependencies:
   flutter_test:
@@ -58,7 +60,7 @@ modules:
 flutter:
 
   assets:
-    - assets/side_drawer_image.jpg
+    - assets/coffee_and_code.csv
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
