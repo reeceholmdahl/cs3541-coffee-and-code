@@ -4,6 +4,7 @@ import 'package:firstapp/stress_management/stress_management.dart';
 import 'package:firstapp/stress_release_videos/video_list.dart';
 import 'package:flutter/material.dart';
 import 'package:firstapp/self_care/self_care.dart';
+import 'package:firstapp/settings.dart';
 
 class SideDrawer extends StatelessWidget {
   const SideDrawer({Key? key}) : super(key: key);
@@ -81,6 +82,14 @@ class SideDrawer extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const SelfCare()));
             },
           ),
+          ListTile(
+            title: const Text('Settings'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push<void>(context,
+              MaterialPageRoute(builder: (context) => const Settings()));
+            },
+          )
         ],
       ),
     );
