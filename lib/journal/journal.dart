@@ -34,7 +34,7 @@ class CoffeeJournal extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.all(12),
+          padding: EdgeInsets.fromLTRB(12, 24, 12, 12),
           child: Card(
               color: Colors.grey,
               child: Padding(
@@ -173,10 +173,6 @@ class CoffeeJournal extends StatelessWidget {
               onPressed: () {
                 Navigator.push<void>(context,
                     MaterialPageRoute(builder: (context) => HistoryView()));
-
-                // For Origional
-                //Navigator.push<void>(context,
-                //    MaterialPageRoute(builder: (context) =>  pastJournals(controllerText: controller, color: moodColor, icon: moodIcon)));
               },
             ),
           ]),

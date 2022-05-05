@@ -1,3 +1,4 @@
+import 'package:firstapp/constants.dart';
 import 'package:firstapp/journal/past_journal.dart';
 import 'package:flutter/material.dart';
 
@@ -11,13 +12,20 @@ class HistoryView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Saved Journals'),
+        backgroundColor: Navy,
+        title: const Text("coffees.forEach(c => {",
+            style: TextStyle(
+                color: White,
+                fontFamily: 'monospace',
+                fontSize: 22,
+                fontWeight: FontWeight.bold)),
         // automaticallyImplyLeading: sfalse,
         // leading: new IconButton(
         //   icon: new Icon(Icons.arrow_back, color: Colors.white),
         //   onPressed: () => Navigator.of(context).pop(),
         // ),
       ),
+      backgroundColor: Brown,
       resizeToAvoidBottomInset: false,
       body: ListPage(),
     );
@@ -45,15 +53,17 @@ class _ListPageState extends State<ListPage> {
     ListTile makeListTile(Readable readable) => ListTile(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
           tileColor: readable.color,
-          contentPadding:
-              EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-          leading: Icon(readable.icon, color: Colors.white),
+          contentPadding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+          leading: Icon(readable.icon, color: White),
           title: Text(
             readable.title,
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                color: White,
+                fontSize: 24,
+                fontFamily: 'monospace',
+                fontWeight: FontWeight.bold),
           ),
-          trailing:
-              Icon(Icons.keyboard_arrow_right, color: Colors.white, size: 30.0),
+          trailing: Icon(Icons.keyboard_arrow_right, color: White, size: 30.0),
           onTap: () {
             Navigator.push(
                 context,
@@ -65,18 +75,20 @@ class _ListPageState extends State<ListPage> {
     Card makeCard(Readable readable) => Card(
           color: Colors.transparent,
           elevation: 8.0,
-          margin: new EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
+          margin: new EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
           child: makeListTile(readable),
         );
 
-    final makeBody = ListView.builder(
-      scrollDirection: Axis.vertical,
-      shrinkWrap: true,
-      itemCount: readable.length,
-      itemBuilder: (BuildContext context, int index) {
-        return makeCard(readable[index]);
-      },
-    );
+    final makeBody = Padding(
+        padding: EdgeInsets.symmetric(vertical: 12),
+        child: ListView.builder(
+          scrollDirection: Axis.vertical,
+          shrinkWrap: true,
+          itemCount: readable.length,
+          itemBuilder: (BuildContext context, int index) {
+            return makeCard(readable[index]);
+          },
+        ));
 
     return makeBody;
   }

@@ -27,7 +27,7 @@ class _VideoListState extends State<VideoList> {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      padding: EdgeInsets.all(16),
+      padding: EdgeInsets.all(24),
       itemBuilder: (context, index) {
         return Column(
           children: [

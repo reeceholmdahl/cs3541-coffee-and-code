@@ -30,7 +30,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Coffee and Code',
+      title: 'coffee and code',
       home: StatefulBuilder(
         builder: (context, setState) => Scaffold(
           resizeToAvoidBottomInset: false,
