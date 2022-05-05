@@ -1,51 +1,27 @@
 import 'dart:core';
-import 'package:firebase_core/firebase_core.dart';
+import 'package:firstapp/alarms.dart';
+import 'package:firstapp/coffee_data.dart';
+import 'package:firstapp/constants.dart';
+import 'package:firstapp/journal/journal.dart';
+import 'package:firstapp/settings.dart';
+import 'package:firstapp/video_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:firstapp/journal/journal.dart';
-import 'package:firstapp/stress_management/stress_management.dart';
-import 'package:firstapp/stress_release_videos/video_list.dart';
-import 'package:firstapp/self_care/self_care.dart';
-
-import 'package:firstapp/side_drawer.dart';
-
 import 'informatics.dart';
-import 'pressable_card.dart';
 
+late final List<CoffeeData> coffeeData;
+int pageIndex = 0;
 
-
-Future<void> main() async {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
-      statusBarColor: Color(0xFF19201E),
+      statusBarColor: Black,
     ),
   );
+  coffeeData = await loadCoffeeDatabaseFromFile();
   runApp(Home());
-}
-
-ThemeData makeTheme(BuildContext context) {
-  final theme = Theme.of(context);
-  return ThemeData.from(
-          colorScheme: theme.colorScheme, textTheme: theme.textTheme)
-      .copyWith(
-          textButtonTheme: TextButtonThemeData(
-              style: TextButton.styleFrom(primary: Color(0xFF41544E))),
-          dialogBackgroundColor: Color(0xFFEFEAE7),
-          brightness: Brightness.light,
-          primaryColor: Color(0xFF41545E),
-          canvasColor: Color(0xFFC4CBC0),
-          cardColor: Color(0xFFEFEAE7),
-          colorScheme: ColorScheme.light(secondary: Color(0xFF78645A)),
-          scaffoldBackgroundColor: Color(0xFFC9BDB6),
-          floatingActionButtonTheme: FloatingActionButtonThemeData(
-              foregroundColor: Color(0xFFEFEAE7),
-              backgroundColor: Color(0xFF78645A)),
-          appBarTheme: AppBarTheme(
-            backgroundColor: Color(0xFF41544E),
-          ));
 }
 
 class Home extends StatelessWidget {
@@ -53,124 +29,72 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = makeTheme(context);
     return MaterialApp(
-      title: 'CoffeeAndCode',
-      theme: theme,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Home"),
-        ),
-        drawer: SideDrawer(),
-        body: Builder(builder: (context) {
-          return ListView(
-            children: [
-              PageCard(
-                name: 'Coffee Informatics',
-                color: Colors.cyan.shade400,
-                onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute<void>(
-                    builder: (context) => Informatics(),
-                  ),
-                ),
-              ),
-              PageCard(
-                name: 'Coffee/Code Journal',
-                color: Colors.yellow.shade400,
-                onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute<void>(
-                    builder: (context) => const DailyJournal(),
-                  ),
-                ),
-              ),
-              PageCard(
-                name: 'Coffee Videos',
-                color: Colors.cyan.shade400,
-                onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute<void>(
-                    builder: (context) => VideoList(),
-                  ),
-                ),
-              ),
+      title: 'Coffee and Code',
+      home: StatefulBuilder(
+        builder: (context, setState) => Scaffold(
+          resizeToAvoidBottomInset: false,
+          restorationId: 'coffee and code',
+          backgroundColor: Brown,
+          appBar: AppBar(
+            backgroundColor: Navy,
+            title: const Center(
+                child: Text("coffee && code;",
+                    style: TextStyle(
+                        color: White,
+                        fontFamily: 'monospace',
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold))),
+          ),
+          bottomNavigationBar: BottomNavigationBar(
+            selectedLabelStyle: TextStyle(fontFamily: 'monospace'),
+            unselectedLabelStyle: TextStyle(fontFamily: 'monospace'),
+            currentIndex: pageIndex,
+            elevation: 3,
+            selectedItemColor: WashedRed,
+            unselectedItemColor: White,
+            onTap: (index) {
+              setState(() => pageIndex = index);
+            },
+            items: [
+              BottomNavigationBarItem(
+                  backgroundColor: Navy,
+                  icon: const Icon(Icons.data_thresholding_sharp),
+                  label: 'Analytics'),
+              BottomNavigationBarItem(
+                  backgroundColor: Navy,
+                  icon: const Icon(Icons.library_books_sharp),
+                  label: 'Diary'),
+              BottomNavigationBarItem(
+                  backgroundColor: Navy,
+                  icon: const Icon(Icons.video_library_sharp),
+                  label: 'Videos'),
+              BottomNavigationBarItem(
+                  backgroundColor: Navy,
+                  icon: const Icon(Icons.alarm_sharp),
+                  label: 'Alarms'),
+              BottomNavigationBarItem(
+                  backgroundColor: Navy,
+                  icon: const Icon(Icons.settings_sharp),
+                  label: 'Settings'),
             ],
-          );
-        }),
+          ),
+          body: Builder(builder: (context) {
+            if (pageIndex == 0) {
+              return Informatics();
+            } else if (pageIndex == 1) {
+              return CoffeeJournal();
+            } else if (pageIndex == 2) {
+              return VideoList();
+            } else if (pageIndex == 3) {
+              return Alarms();
+            } else if (pageIndex == 4) {
+              return Settings();
+            }
+            throw UnimplementedError();
+          }),
+        ),
       ),
     );
   }
-}
-
-/*
-Used for creation of each tile
-*/
-class PageCard extends StatelessWidget {
-  const PageCard({
-    required this.name,
-    required this.color,
-    // required this.transitionAnimation,
-    this.onPressed,
-    Key? key,
-  }) : super(key: key);
-
-  final String name;
-  final Color color;
-  final VoidCallback? onPressed;
-  final Animation<double> transitionAnimation =
-      const AlwaysStoppedAnimation(0); //not going to use, but can do later
-
-  @override
-  Widget build(context) {
-    return SafeArea(
-      top: false,
-      bottom: false,
-      child: AnimatedBuilder(
-        animation: transitionAnimation,
-        builder: (context, child) {
-          return PressableCard(
-            onPressed: transitionAnimation.value == 0 ? onPressed : null,
-            //image: image,
-            color: color,
-            flattenAnimation: transitionAnimation,
-            child: SizedBox(
-              height: 200,
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  Positioned(
-                    top: -80 * transitionAnimation.value,
-                    left: 0,
-                    right: 0,
-                    child: Container(
-                      height: 50,
-                      color: Colors.black12,
-                      alignment: Alignment.center,
-                      padding: const EdgeInsets.symmetric(horizontal: 12),
-                      child: Text(
-                        name,
-                        style: const TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.w300,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          );
-        },
-      ),
-    );
-  }
-}
-
-String makeDBDate() {
-  DateTime date = DateTime.now();
-  String year = date.year.toString();
-  String month = date.month.toString();
-  String day = date.day.toString();
-  return (day + "-" + month + "-" + year);
 }

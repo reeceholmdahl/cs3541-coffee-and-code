@@ -5,7 +5,7 @@ class Readable {
   final IconData icon;
   final String title;
   final String content;
-  final MaterialColor color;
+  final Color color;
   final String ingredient;
   final IconData tempicon;
 
@@ -14,6 +14,6 @@ class Readable {
       required this.title,
       required this.content,
       required this.color,
-        required this.ingredient,
-        required this.tempicon});
+      required this.ingredient,
+      required this.tempicon});
 }

@@ -44,7 +44,7 @@ class _ListPageState extends State<ListPage> {
   Widget build(BuildContext context) {
     ListTile makeListTile(Readable readable) => ListTile(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-          tileColor: readable.color.shade400,
+          tileColor: readable.color,
           contentPadding:
               EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
           leading: Icon(readable.icon, color: Colors.white),

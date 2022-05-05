@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 @immutable
-class Mood {
+class Taste {
   final String name;
-  final MaterialColor color;
+  final Color color;
   final IconData iconData;
 
-  const Mood(this.name, this.color, this.iconData);
+  const Taste(this.name, this.color, this.iconData);
 }

@@ -1,11 +1,9 @@
-
-import 'package:flutter/cupertino.dart';
+import 'package:firstapp/main.dart';
 import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter_grid_button/flutter_grid_button.dart';
 
-import 'CoffeeDataFile.dart';
-import 'side_drawer.dart';
+import 'coffee_data.dart';
 
 enum LegendShape { Circle, Rectangle }
 
@@ -27,13 +25,11 @@ class GraphWidget extends StatefulWidget {
   _GraphWidgetState createState() => _GraphWidgetState();
 }
 
-var data = CoffeeData.coffeeData;
-
 class _GraphWidgetState extends State<GraphWidget> {
   static List<String> getCoffeeTypes() {
     List<String> toReturn = [];
 
-    for (CoffeeData entry in data) {
+    for (CoffeeData entry in coffeeData) {
       if (!toReturn.contains(entry.coffeeType)) toReturn.add(entry.coffeeType);
     }
 
@@ -43,7 +39,7 @@ class _GraphWidgetState extends State<GraphWidget> {
   static List<String> getCoffeeTimes() {
     List<String> toReturn = [];
 
-    for (CoffeeData entry in data) {
+    for (CoffeeData entry in coffeeData) {
       if (!toReturn.contains(entry.coffeeTime)) toReturn.add(entry.coffeeTime);
     }
 
@@ -53,7 +49,7 @@ class _GraphWidgetState extends State<GraphWidget> {
   static int getCoffeeTimeCount(String coffeeTime) {
     int count = 0;
 
-    for (CoffeeData entry in data) {
+    for (CoffeeData entry in coffeeData) {
       if (entry.coffeeTime == coffeeTime) {
         count++;
       }
@@ -64,7 +60,7 @@ class _GraphWidgetState extends State<GraphWidget> {
   static int getCoffeeTypeCount(String coffeeType) {
     int count = 0;
 
-    for (CoffeeData entry in data) {
+    for (CoffeeData entry in coffeeData) {
       if (entry.coffeeType == coffeeType) {
         count++;
       }
@@ -150,18 +146,17 @@ class _GraphWidgetState extends State<GraphWidget> {
     return toReturn; //returns list of coffeeData with coffee types from search
   }
 
-
-
-  static List<SimpleObject> getHistogramFrequenciesCoffeeCups(List<CoffeeData> data) {
+  static List<SimpleObject> getHistogramFrequenciesCoffeeCups(
+      List<CoffeeData> data) {
     List<SimpleObject> objects = [];
 
     var domain = getHistogramDomainsCoffeeCups(data);
 
     int count = 0;
 
-    for(int entry in domain) {
-      for(CoffeeData dataEntry  in data) {
-        if(dataEntry.coffeeCupsPerDay == entry) {
+    for (int entry in domain) {
+      for (CoffeeData dataEntry in data) {
+        if (dataEntry.coffeeCupsPerDay == entry) {
           ++count;
         }
       }
@@ -176,25 +171,25 @@ class _GraphWidgetState extends State<GraphWidget> {
   static List<int> getHistogramDomainsCoffeeCups(List<CoffeeData> data) {
     List<int> ids = [];
 
-    for(CoffeeData entry in data) {
-      if(!ids.contains(entry.coffeeCupsPerDay)) {
+    for (CoffeeData entry in data) {
+      if (!ids.contains(entry.coffeeCupsPerDay)) {
         ids.add(entry.coffeeCupsPerDay);
       }
     }
     return ids;
   }
 
-
-  static List<SimpleObject> getHistogramFrequenciesCodingHours(List<CoffeeData> data) {
+  static List<SimpleObject> getHistogramFrequenciesCodingHours(
+      List<CoffeeData> data) {
     List<SimpleObject> objects = [];
 
     var domain = getHistogramDomainsCodingHours(data);
 
     int count = 0;
 
-    for(int entry in domain) {
-      for(CoffeeData dataEntry  in data) {
-        if(dataEntry.codingHours == entry) {
+    for (int entry in domain) {
+      for (CoffeeData dataEntry in data) {
+        if (dataEntry.codingHours == entry) {
           ++count;
         }
       }
@@ -209,8 +204,8 @@ class _GraphWidgetState extends State<GraphWidget> {
   static List<int> getHistogramDomainsCodingHours(List<CoffeeData> data) {
     List<int> ids = [];
 
-    for(CoffeeData entry in data) {
-      if(!ids.contains(entry.codingHours)) {
+    for (CoffeeData entry in data) {
+      if (!ids.contains(entry.codingHours)) {
         ids.add(entry.codingHours);
       }
     }
@@ -237,7 +232,7 @@ class _GraphWidgetState extends State<GraphWidget> {
           new charts.ChartTitle(leftAxis,
               behaviorPosition: charts.BehaviorPosition.start,
               titleOutsideJustification:
-              charts.OutsideJustification.middleDrawArea),
+                  charts.OutsideJustification.middleDrawArea),
         ],
       );
     } else {
@@ -255,10 +250,10 @@ class _GraphWidgetState extends State<GraphWidget> {
             new charts.ChartTitle(leftAxis,
                 behaviorPosition: charts.BehaviorPosition.start,
                 titleOutsideJustification:
-                charts.OutsideJustification.middleDrawArea),
+                    charts.OutsideJustification.middleDrawArea),
           ],
           domainAxis: new charts.OrdinalAxisSpec(
-            // Make sure that we draw the domain axis line.
+              // Make sure that we draw the domain axis line.
               showAxisLine: true,
               // But don't draw anything else.
               renderSpec: new charts.NoneRenderSpec()));
@@ -277,32 +272,35 @@ class _GraphWidgetState extends State<GraphWidget> {
     );
   }
 
-
-  static Container graphBuilderHistogram(List<charts.Series<SimpleObject, String>> series,
-      String title, String leftAxis, String rightAxis) {
+  static Container graphBuilderHistogram(
+      List<charts.Series<SimpleObject, String>> series,
+      String title,
+      String leftAxis,
+      String rightAxis) {
     final chart;
 
-      chart = charts.BarChart(
-        series,
-        animate: true,
-        behaviors: [
-          new charts.ChartTitle(title,
-              behaviorPosition: charts.BehaviorPosition.top,
-              titleOutsideJustification: charts.OutsideJustification.start,
-              // Set a larger inner padding than the default (10) to avoid
-              // rendering the text too close to the top measure axis tick label.
-              // The top tick label may extend upwards into the top margin region
-              // if it is located at the top of the draw area.
-              innerPadding: 18),
-          new charts.ChartTitle(leftAxis,
-              behaviorPosition: charts.BehaviorPosition.start,
-              titleOutsideJustification:
-              charts.OutsideJustification.middleDrawArea),
-          new charts.ChartTitle(rightAxis,
-          behaviorPosition: charts.BehaviorPosition.bottom,
-          titleOutsideJustification: charts.OutsideJustification.middleDrawArea)
-        ],
-      );
+    chart = charts.BarChart(
+      series,
+      animate: true,
+      behaviors: [
+        new charts.ChartTitle(title,
+            behaviorPosition: charts.BehaviorPosition.top,
+            titleOutsideJustification: charts.OutsideJustification.start,
+            // Set a larger inner padding than the default (10) to avoid
+            // rendering the text too close to the top measure axis tick label.
+            // The top tick label may extend upwards into the top margin region
+            // if it is located at the top of the draw area.
+            innerPadding: 18),
+        new charts.ChartTitle(leftAxis,
+            behaviorPosition: charts.BehaviorPosition.start,
+            titleOutsideJustification:
+                charts.OutsideJustification.middleDrawArea),
+        new charts.ChartTitle(rightAxis,
+            behaviorPosition: charts.BehaviorPosition.bottom,
+            titleOutsideJustification:
+                charts.OutsideJustification.middleDrawArea)
+      ],
+    );
 
     return Container(
       height: 400,
@@ -317,7 +315,6 @@ class _GraphWidgetState extends State<GraphWidget> {
       ),
     );
   }
-
 
   Widget build(BuildContext context) {
     Container container = Container();
@@ -367,7 +364,8 @@ class _GraphWidgetCoffeeTypeState extends State<GraphWidgetCoffeeType> {
           _GraphWidgetState.graphBuilder([
             charts.Series<CoffeeData, String>(
               id: "Test",
-              data: _GraphWidgetState.coffeeTypeSearch(dropdownValue, data),
+              data:
+                  _GraphWidgetState.coffeeTypeSearch(dropdownValue, coffeeData),
               domainFn: (CoffeeData series, _) => series.coffeeType,
               measureFn: (CoffeeData series, _) =>
                   _GraphWidgetState.getCoffeeTypeCount(series.coffeeType),
@@ -423,7 +421,8 @@ class _GraphWidgetCoffeeTimesState extends State<GraphWidgetCoffeeTimes> {
           _GraphWidgetState.graphBuilder([
             charts.Series<CoffeeData, String>(
               id: "Test",
-              data: _GraphWidgetState.coffeeTimeSearch(dropdownValue, data),
+              data:
+                  _GraphWidgetState.coffeeTimeSearch(dropdownValue, coffeeData),
               domainFn: (CoffeeData series, _) => series.coffeeTime,
               measureFn: (CoffeeData series, _) =>
                   _GraphWidgetState.getCoffeeTimeCount(series.coffeeTime),
@@ -472,8 +471,9 @@ class _GraphWidgetCoffeeCupsState extends State<GraphWidgetCoffeeCups> {
       }).toList(),
     );
 
-    List<SimpleObject> histData = _GraphWidgetState.getHistogramFrequenciesCoffeeCups(_GraphWidgetState.orderCoffeeCupsPerDay(data, dropdownValue));
-
+    List<SimpleObject> histData =
+        _GraphWidgetState.getHistogramFrequenciesCoffeeCups(
+            _GraphWidgetState.orderCoffeeCupsPerDay(coffeeData, dropdownValue));
 
     Container container = Container(
       child: Column(
@@ -487,7 +487,8 @@ class _GraphWidgetCoffeeCupsState extends State<GraphWidgetCoffeeCups> {
               measureFn: (SimpleObject object, _) => object.data2,
               colorFn: (_, __) => charts.ColorUtil.fromDartColor(Colors.blue),
             )
-          ], "Frequency of Coffee Cups per Day", "Frequency", "Coffee Cups Per Day")
+          ], "Frequency of Coffee Cups per Day", "Frequency",
+              "Coffee Cups Per Day")
         ],
       ),
     );
@@ -530,8 +531,9 @@ class _GraphWidgetCodingHoursState extends State<GraphWidgetCodingHours> {
       }).toList(),
     );
 
-     List<SimpleObject> histData = _GraphWidgetState.getHistogramFrequenciesCodingHours(_GraphWidgetState.orderCodingHours(data, dropdownValue));
-
+    List<SimpleObject> histData =
+        _GraphWidgetState.getHistogramFrequenciesCodingHours(
+            _GraphWidgetState.orderCodingHours(coffeeData, dropdownValue));
 
     Container container = Container(
       child: Column(
@@ -592,71 +594,66 @@ class _InformaticsState extends State<Informatics> {
   Widget build(BuildContext context) {
     const textStyle = TextStyle(fontSize: 26);
 
-    return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.brown,
-          title: Text("Database"),
-        ),
-        body: SingleChildScrollView(
-            child: Column(children: [
-              Container(
-                height: 300,
-                child: Builder(builder: (context) {
-                  return Padding(
-                    padding: const EdgeInsets.all(18.0),
-                    child: GridButton(
-                      textStyle: textStyle,
-                      borderColor: Colors.grey[300],
-                      borderWidth: 2,
-                      onPressed: (dynamic val) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            content: Text(val.toString()),
-                            duration: Duration(milliseconds: 400),
-                          ),
-                        );
+    return SingleChildScrollView(
+        child: Column(children: [
+      Container(
+        height: 300,
+        child: Builder(builder: (context) {
+          return Padding(
+            padding: const EdgeInsets.all(18.0),
+            child: GridButton(
+              textStyle: textStyle,
+              borderColor: Colors.grey[300],
+              borderWidth: 2,
+              onPressed: (dynamic val) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(val.toString()),
+                    duration: Duration(milliseconds: 400),
+                  ),
+                );
 
-                        if (val == "Coffee Types") {
-                          _setGraphStateCoffeeType();
-                        } else if (val == "Coffee Times") {
-                          _setGraphStateCoffeeTimes();
-                        } else if (val == "Coffee Cups Per Day") {
-                          _setGraphStateCoffeeCups();
-                        } else if (val == "Coding Hours Per Day") {
-                          _setGraphStateCodingHours();
-                        }
-                      },
-                      items: [
-                        [
-                          GridButtonItem(
-                            title: "Coffee Types",
-                            color: Colors.brown[600],
-                            textStyle: textStyle.copyWith(color: Colors.white),
-                          ),
-                          GridButtonItem(
-                            title: "Coffee Times",
-                            color: Colors.brown[700],
-                            textStyle: textStyle.copyWith(color: Colors.white),
-                          ),
-                        ],
-                        [
-                          GridButtonItem(
-                            title: "Coffee Cups Per Day",
-                            color: Colors.brown[800],
-                            textStyle: textStyle.copyWith(color: Colors.white),
-                          ),
-                          GridButtonItem(
-                            title: "Coding Hours Per Day",
-                            color: Colors.brown[900],
-                            textStyle: textStyle.copyWith(color: Colors.white),
-                          ),
-                        ],
-                      ],
-                    ),
-                  );
-                }),
-              ),
-              graphWidget
-            ])));
+                if (val == "Coffee Types") {
+                  _setGraphStateCoffeeType();
+                } else if (val == "Coffee Times") {
+                  _setGraphStateCoffeeTimes();
+                } else if (val == "Coffee Cups Per Day") {
+                  _setGraphStateCoffeeCups();
+                } else if (val == "Coding Hours Per Day") {
+                  _setGraphStateCodingHours();
+                }
+              },
+              items: [
+                [
+                  GridButtonItem(
+                    title: "Coffee Types",
+                    color: Colors.brown[600],
+                    textStyle: textStyle.copyWith(color: Colors.white),
+                  ),
+                  GridButtonItem(
+                    title: "Coffee Times",
+                    color: Colors.brown[700],
+                    textStyle: textStyle.copyWith(color: Colors.white),
+                  ),
+                ],
+                [
+                  GridButtonItem(
+                    title: "Coffee Cups Per Day",
+                    color: Colors.brown[800],
+                    textStyle: textStyle.copyWith(color: Colors.white),
+                  ),
+                  GridButtonItem(
+                    title: "Coding Hours Per Day",
+                    color: Colors.brown[900],
+                    textStyle: textStyle.copyWith(color: Colors.white),
+                  ),
+                ],
+              ],
+            ),
+          );
+        }),
+      ),
+      graphWidget
+    ]));
   }
 }

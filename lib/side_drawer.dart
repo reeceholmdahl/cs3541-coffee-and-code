@@ -1,9 +1,5 @@
-import 'package:firstapp/journal/journal.dart';
 import 'package:firstapp/main.dart';
-import 'package:firstapp/stress_management/stress_management.dart';
-import 'package:firstapp/stress_release_videos/video_list.dart';
 import 'package:flutter/material.dart';
-import 'package:firstapp/self_care/self_care.dart';
 
 import 'package:firstapp/settings.dart';
 import 'package:firstapp/alarms.dart';
@@ -57,7 +53,7 @@ class SideDrawer extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
               Navigator.push<void>(context,
-              MaterialPageRoute(builder: (context) => const Settings()));
+                  MaterialPageRoute(builder: (context) => const Settings()));
             },
           )
         ],

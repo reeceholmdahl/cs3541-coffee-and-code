@@ -3,8 +3,6 @@ import 'package:flutter_alarm_clock/flutter_alarm_clock.dart';
 import 'package:numberpicker/numberpicker.dart';
 import 'package:flutter/material.dart';
 
-import 'side_drawer.dart';
-
 class Alarms extends StatefulWidget {
   const Alarms({Key? key}) : super(key: key);
 
@@ -69,36 +67,29 @@ class AlarmsState extends State<Alarms> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: SideDrawer(),
-      appBar: AppBar(
-        title: const Text('Alarm Page'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            const SizedBox(height: 10),
-            //adjust heights
-            AlarmIcon(),
-            const SizedBox(height: 300),
-            //edit this and change format of button
+    return Center(
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          const SizedBox(height: 10),
+          //adjust heights
+          AlarmIcon(),
+          const SizedBox(height: 300),
+          //edit this and change format of button
 
-            new Align(
-                alignment: Alignment.bottomCenter,
-                child: IconButton(
-                  icon: const Icon(Icons.add_circle_rounded),
-                  color: Theme.of(context)
-                      .floatingActionButtonTheme
-                      .backgroundColor,
-                  iconSize: 100,
-                  onPressed: () {
-                    buildNewAlarmPopup(context);
-                  },
-                ))
-            //SavedAlarms(), //shows the saved alarms
-          ],
-        ),
+          new Align(
+              alignment: Alignment.bottomCenter,
+              child: IconButton(
+                icon: const Icon(Icons.add_circle_rounded),
+                color:
+                    Theme.of(context).floatingActionButtonTheme.backgroundColor,
+                iconSize: 100,
+                onPressed: () {
+                  buildNewAlarmPopup(context);
+                },
+              ))
+          //SavedAlarms(), //shows the saved alarms
+        ],
       ),
     );
   }
