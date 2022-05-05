@@ -1,7 +1,7 @@
 import 'dart:developer';
 
-import 'package:firstapp/constants.dart';
-import 'package:firstapp/model/temp.dart';
+import 'package:coffee_and_code/constants.dart';
+import 'package:coffee_and_code/model/temp.dart';
 import 'package:flutter/material.dart';
 
 import '../model/taste.dart';

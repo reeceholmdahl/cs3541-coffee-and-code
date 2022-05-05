@@ -1,8 +1,8 @@
 import 'dart:developer';
 import 'dart:math' as math;
 
-import 'package:firstapp/constants.dart';
-import 'package:firstapp/main.dart';
+import 'package:coffee_and_code/constants.dart';
+import 'package:coffee_and_code/main.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
@@ -23,6 +23,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
+    _googleSignIn.disconnect();
     _ctrl = AnimationController(vsync: this, duration: Duration(seconds: 3));
     _screenSpace = Tween<double>(begin: 0, end: 1).animate(
         CurvedAnimation(parent: _ctrl, curve: Curves.easeInOutCubicEmphasized));
@@ -60,9 +61,10 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                     Future.delayed(Duration(milliseconds: 3250), () {
                       Navigator.pop(context);
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => MainPage(_account!)));
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => MainPage(_account!)),
+                      );
                     });
                   }),
               child: const Text('google oauth login',

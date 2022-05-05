@@ -3,7 +3,7 @@ import 'info_classes/information.dart';
 import 'favorite_info.dart';
 import 'info_details.dart';
 import 'info_lists.dart';
-import 'package:firstapp/constants.dart';
+import 'package:coffee_and_code/constants.dart';
 
 class AllInfo extends StatelessWidget {
   final String title;
@@ -28,15 +28,15 @@ class AllInfo extends StatelessWidget {
             Navigator.pop(context);
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => FavoriteInfo(title: title)),
+              MaterialPageRoute(
+                  builder: (context) => FavoriteInfo(title: title)),
             );
           },
           icon: Icon(Icons.favorite),
           label: Text("Favorites", style: TextStyle(fontFamily: 'monospace')),
           backgroundColor: Navy,
         ),
-        body: AllInfoList(title)
-    );
+        body: AllInfoList(title));
   }
 }
 
@@ -70,13 +70,12 @@ class _AllInfoListState extends State<AllInfoList> {
         this.favoritesList = InfoLists.favGuidelines;
         break;
     }
-
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Brown,
+        backgroundColor: Brown,
         body: ListView.builder(
             itemCount: infoList.length + 1,
             itemBuilder: (context, index) {
@@ -91,11 +90,14 @@ class _AllInfoListState extends State<AllInfoList> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => InfoDetails(info: information)));
+                            builder: (context) =>
+                                InfoDetails(info: information)));
                   },
                   title: Text(information.title,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'monospace',)
-                  ),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'monospace',
+                      )),
                   leading: CircleAvatar(
                     child: Icon(
                       information.icon,

@@ -1,5 +1,5 @@
 import 'dart:core';
-import 'package:firstapp/constants.dart';
+import 'package:coffee_and_code/constants.dart';
 import 'package:flutter_alarm_clock/flutter_alarm_clock.dart';
 import 'package:numberpicker/numberpicker.dart';
 import 'package:flutter/material.dart';

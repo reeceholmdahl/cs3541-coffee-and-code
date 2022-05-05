@@ -1,12 +1,13 @@
 import 'dart:core';
 import 'dart:developer';
-import 'package:firstapp/alarms.dart';
-import 'package:firstapp/coffee_data.dart';
-import 'package:firstapp/constants.dart';
-import 'package:firstapp/journal/journal.dart';
-import 'package:firstapp/settings.dart';
-import 'package:firstapp/coff_and_code_info/info_menu.dart';
-import 'package:firstapp/video_list.dart';
+import 'package:coffee_and_code/alarms.dart';
+import 'package:coffee_and_code/coffee_data.dart';
+import 'package:coffee_and_code/constants.dart';
+import 'package:coffee_and_code/journal/journal.dart';
+import 'package:coffee_and_code/login.dart';
+import 'package:coffee_and_code/settings.dart';
+import 'package:coffee_and_code/coff_and_code_info/info_menu.dart';
+import 'package:coffee_and_code/video_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -35,7 +36,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'coffee and code',
-      home: MainPage(null),
+      home: LoginPage(),
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'info_classes/information.dart';
 import 'package:flutter/material.dart';
-import 'package:firstapp/constants.dart';
+import 'package:coffee_and_code/constants.dart';
 
 class InfoDetails extends StatelessWidget {
   final Information info;
@@ -18,18 +18,15 @@ class InfoDetails extends StatelessWidget {
                   fontSize: 22,
                   fontWeight: FontWeight.bold)),
         ),
-      backgroundColor: Brown,
-      body: Container(
-        padding: EdgeInsets.all(10),
-        child: Text(info.details,
-          style: TextStyle(
-            fontSize: 20,
-            color: White,
-            fontFamily: 'monospace',
-          )
-        ),
-      )
-    );
+        backgroundColor: Brown,
+        body: Container(
+          padding: EdgeInsets.all(10),
+          child: Text(info.details,
+              style: TextStyle(
+                fontSize: 20,
+                color: White,
+                fontFamily: 'monospace',
+              )),
+        ));
   }
-
 }

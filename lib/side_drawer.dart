@@ -1,8 +1,8 @@
-import 'package:firstapp/main.dart';
+import 'package:coffee_and_code/main.dart';
 import 'package:flutter/material.dart';
 
-import 'package:firstapp/settings.dart';
-import 'package:firstapp/alarms.dart';
+import 'package:coffee_and_code/settings.dart';
+import 'package:coffee_and_code/alarms.dart';
 
 class SideDrawer extends StatelessWidget {
   const SideDrawer({Key? key}) : super(key: key);

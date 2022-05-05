@@ -1,14 +1,13 @@
-import 'package:firstapp/side_drawer.dart';
+import 'package:coffee_and_code/side_drawer.dart';
 import 'package:flutter/material.dart';
 
-import 'package:firstapp/constants.dart';
+import 'package:coffee_and_code/constants.dart';
 import 'info_classes/information.dart';
 import 'info_details.dart';
 import 'info_lists.dart';
 import 'all_info.dart';
 
 class FavoriteInfo extends StatelessWidget {
-
   final String title;
   const FavoriteInfo({Key? key, required this.title}) : super(key: key);
 
@@ -35,11 +34,13 @@ class FavoriteInfo extends StatelessWidget {
               MaterialPageRoute(builder: (context) => AllInfo(title: title)),
             );
           },
-          label: Text("All", style: TextStyle(fontFamily: 'monospace'),),
+          label: Text(
+            "All",
+            style: TextStyle(fontFamily: 'monospace'),
+          ),
           icon: Icon(Icons.arrow_back),
           backgroundColor: Navy,
-        )
-    );
+        ));
   }
 }
 
@@ -90,11 +91,9 @@ class _FavoritesState extends State<Favorites> {
             });
           },
           itemBuilder: (context, index) {
-          Information info = favoritesList[index];
+            Information info = favoritesList[index];
 
-          return Column(
-            key: Key(info.title),
-            children: [
+            return Column(key: Key(info.title), children: [
               Dismissible(
                 key: Key(info.title),
                 onDismissed: (direction) {
@@ -104,50 +103,48 @@ class _FavoritesState extends State<Favorites> {
                     favoritesList.removeAt(index);
                   });
                   ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text("Removed from favorites")));
+                      SnackBar(content: Text("Removed from favorites")));
                 },
                 background: Container(
                   color: Color(0xff9f1818),
                   alignment: Alignment.centerRight,
                   padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
                   child: Text("Remove",
-                    style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    )
-                  ),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                      )),
                 ),
                 child: ListTile(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => InfoDetails(info: info)));
-                  },
-                  tileColor: Colors.grey,
-                  title: Text(info.title,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'monospace')),
-                  leading: CircleAvatar(
-                    child: Icon(
-                      info.icon,
-                      color: info.iconColor,
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => InfoDetails(info: info)));
+                    },
+                    tileColor: Colors.grey,
+                    title: Text(info.title,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'monospace')),
+                    leading: CircleAvatar(
+                      child: Icon(
+                        info.icon,
+                        color: info.iconColor,
+                      ),
+                      backgroundColor: info.backgroundColor,
                     ),
-                  backgroundColor: info.backgroundColor,
-                  ),
-                trailing: ReorderableDragStartListener(
-                  index: index,
-                  child: Icon(
-                    Icons.view_headline,
-                    color: Navy,
-                  ),
-                )
-                ),
+                    trailing: ReorderableDragStartListener(
+                      index: index,
+                      child: Icon(
+                        Icons.view_headline,
+                        color: Navy,
+                      ),
+                    )),
               ),
               SizedBox(height: 5),
-            ]
-          );
-        },
-      )
-    );
+            ]);
+          },
+        ));
   }
 }

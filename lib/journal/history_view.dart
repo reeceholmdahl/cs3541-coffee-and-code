@@ -1,5 +1,5 @@
-import 'package:firstapp/constants.dart';
-import 'package:firstapp/journal/past_journal.dart';
+import 'package:coffee_and_code/constants.dart';
+import 'package:coffee_and_code/journal/past_journal.dart';
 import 'package:flutter/material.dart';
 
 import '../model/readable.dart';

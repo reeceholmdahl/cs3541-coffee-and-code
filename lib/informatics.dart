@@ -1,4 +1,4 @@
-import 'package:firstapp/main.dart';
+import 'package:coffee_and_code/main.dart';
 import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter_grid_button/flutter_grid_button.dart';

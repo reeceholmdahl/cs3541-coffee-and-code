@@ -1,4 +1,4 @@
-import 'package:firstapp/model/readable.dart';
+import 'package:coffee_and_code/model/readable.dart';
 import 'package:flutter/material.dart';
 
 final List<Readable> _readableList = [];

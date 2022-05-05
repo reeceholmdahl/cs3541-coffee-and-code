@@ -1,4 +1,4 @@
-import 'package:firstapp/constants.dart';
+import 'package:coffee_and_code/constants.dart';
 import 'package:flutter/material.dart';
 import '../model/readable.dart';
 
