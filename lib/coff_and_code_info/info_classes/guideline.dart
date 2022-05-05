@@ -9,14 +9,31 @@ class Guideline extends Information {
   }
 
   void decideAvatarProperties() {
-
+    //type 1 = variable, type 2 = function, type 3 = readability
+    switch (type) {
+      case 1:
+        super.assignAvatarProperties(
+            Colors.deepOrangeAccent, Colors.orange[100], Icons.cancel_presentation);
+        break;
+      case 2:
+        super.assignAvatarProperties(
+            Colors.blueAccent, Colors.blue[100], Icons.account_tree_outlined);
+        break;
+      case 3:
+        super.assignAvatarProperties(
+            Colors.amber, Colors.yellow[50], Icons.menu_book);
+        break;
+      default:
+        super.assignAvatarProperties(
+            Colors.white, Colors.white, Icons.add_circle_outlined);
+        break;
+    }
   }
 
   String detailsBuilder(List<String> info) {
     String details = "";
-    details += ("Guideline:\n" + info[0] + "\n");
-    details += ("Benefit:\n" + info[1] + "\n");
-    details += ("Source:\n" + info[3] + "\n");
+    details += ("Description:\n" + info[0] + "\n");
+    details += ("Source:\n" + info[1] + "\n");
     return details;
   }
 }

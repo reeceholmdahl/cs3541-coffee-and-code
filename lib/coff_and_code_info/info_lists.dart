@@ -15,14 +15,21 @@ class InfoLists {
     Recipe("Latte", ["Pour milk into metallic pitcher", "Add flavorings to cup (Optional)",
       "Place cup under espresso machine and select number of shots", "While espresso is dispensing, steam milk",
       "Create foam (if desired) by steaming in top 2 inches of milk", "Pour steamed milk into cup with espresso and stir"], 1),
-    Recipe("Iced Latte", ["Iced latte recipe"], 2),
-    Recipe("Mocha", ["Mocha recipe"], 1),
-    Recipe("Iced Mocha", ["Iced mocha recipe"], 2),
-    Recipe("Americano", ["Americano recipe"], 1),
-    Recipe("Cappuccino", ["Cappuccino recipe"], 1),
-    Recipe("Macchiato", ["Macchiato recipe"], 1),
-    Recipe("Iced Macchiato", ["Iced macchiato recipe"], 2),
-    Recipe("Blended Coffee", ["Blended coffee recipe"], 2),
+    Recipe("Iced Latte", ["Add flavorings to cup (Optional)", "Place cup under espresso machine and select number of shots",
+      "Pour milk into cup with espresso, leaving room for ice, and stir", "Add Ice"], 2),
+    Recipe("Mocha", ["Pour milk into metallic pitcher", "Add mocha and additional flavorings (Optional) to cup",
+      "Place cup under espresso machine and select number of shots", "While espresso is dispensing, steam milk",
+      "Create foam (if desired) by steaming in top 2 inches of milk", "Pour steamed milk into cup with espresso and stir"], 1),
+    Recipe("Iced Mocha", ["Add mocha and additional flavorings (Optional) to cup", "Place cup under espresso machine and select number of shots",
+      "Pour milk into cup with espresso, leaving room for ice, and stir", "Add Ice"], 2),
+    Recipe("Americano", ["Heat water", "Place cup under espresso machine and select number of shots",
+      "Pour hot water into cup with espresso and stir"], 1),
+    Recipe("Macchiato", ["Pour milk into metallic pitcher", "Add flavorings to cup (Optional)",
+      "Place smaller cup under espresso machine and select number of shots", "While espresso is dispensing, steam milk",
+      "Create foam (if desired) by steaming in top 2 inches of milk", "Pour steamed milk into cup with flavorings",
+      "pour espresso over top"], 1),
+    Recipe("Iced Macchiato", ["Add flavorings to cup (Optional)", "Place smaller cup under espresso machine and select number of shots",
+      "Pour milk into cup with flavorings, leaving room for ice, and stir", "Add Ice", "Pour espresso over top"], 2),
   ];
 
   static List<Recipe> favRecipes = [];
@@ -51,7 +58,25 @@ class InfoLists {
   static List<Shop> favShops = [];
 
   static List<Guideline> guidelines = [
-
+    Guideline("Limit Globals", ["Limiting global variables decreases coupling",
+      "geeksforgeeks.org"], 1),
+    Guideline("Variable Naming", ["Meaningful variable names increase code readability",
+      "geeksforgeeks.org"], 1),
+    Guideline("Variable Capitalization", ["Local variables in camel case, "
+      "global variables start with capital letter, and constants in all caps",
+      "geeksforgeeks.org"], 1),
+    Guideline("Function Capitalization", ["Functions in camel case leads to consistency in capitalization",
+      "geeksforgeeks.org"], 2),
+    Guideline("Function Naming", ["Function names must describe the reason of using the function",
+      "geeksforgeeks.org"], 2),
+    Guideline("Consistency in Spacing", ["Consistency in indentation and spacing increases code readability",
+      "geeksforgeeks.org"], 3),
+    Guideline("Error Return Values", ["All functions encountering error condition should either return a 0 or 1 for simple debugging",
+      "geeksforgeeks.org"], 2),
+    Guideline("Documentation", ["Well-documented code is easiest to understand",
+      "geeksforgeeks.org"], 3),
+    Guideline("Function Length", ["Functions should complete one task, otherwise they become difficult to understand",
+      "geeksforgeeks.org"], 2),
   ];
 
   static List<Guideline> favGuidelines = [];

@@ -9,6 +9,7 @@ class Shop extends Information {
   }
 
   void decideAvatarProperties() {
+    //type 1 = chain, type 2 = local
     switch (type) {
       case 1:
         super.assignAvatarProperties(
