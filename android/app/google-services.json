@@ -1,43 +1,102 @@
 {
   "project_info": {
-    "project_number": "54461884644",
-    "firebase_url": "https://stress-free-app-d0c31-default-rtdb.firebaseio.com",
-    "project_id": "stress-free-app-d0c31",
-    "storage_bucket": "stress-free-app-d0c31.appspot.com"
+    "project_number": "888180028544",
+    "firebase_url": "https://startupnames-e58ea-default-rtdb.firebaseio.com",
+    "project_id": "startupnames-e58ea",
+    "storage_bucket": "startupnames-e58ea.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:54461884644:android:46020b6bd154c916e524f1",
+        "mobilesdk_app_id": "1:888180028544:android:06743af959d18eef92e265",
         "android_client_info": {
-          "package_name": "com.alpha.Stress_Free"
+          "package_name": "com.alphaGangstas.CoffeeCode"
         }
       },
       "oauth_client": [
         {
-          "client_id": "54461884644-nvinca2p8r0fbf5irckuri3aa0vj9j3n.apps.googleusercontent.com",
+          "client_id": "888180028544-6c7ithvipan1f1kftb5vjsg3n5f9ag03.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.alpha.Stress_Free",
-            "certificate_hash": "33da4979424c7ceeccd4bad64ebff4ffbb376f1a"
+            "package_name": "com.alphaGangstas.CoffeeCode",
+            "certificate_hash": "c041f4422344065f84b2ede8946c1e89b6bd113d"
           }
         },
         {
-          "client_id": "54461884644-ht118s2rtstb32qujhgkk0nk03g0lkil.apps.googleusercontent.com",
+          "client_id": "888180028544-2v3vgr47hqp6pitu8k4fjaq7l07svi0o.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyANJ3iQZ7z8a9a38t23cvxCU_ASvSKSySA"
+          "current_key": "AIzaSyD5grVo_2cj_3HSl1CT1MGG4KV6sCJykRw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "54461884644-ht118s2rtstb32qujhgkk0nk03g0lkil.apps.googleusercontent.com",
+              "client_id": "888180028544-2v3vgr47hqp6pitu8k4fjaq7l07svi0o.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "888180028544-1dsj4g7lp7km7q4it7if8inf49hmcc7o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.alphaGangstas.CoffeeCode"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:888180028544:android:e5ba917c28c46b5b92e265",
+        "android_client_info": {
+          "package_name": "com.example.firstapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "888180028544-2lgft36a0h5dhd1cr5co86sge0fltupg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firstapp",
+            "certificate_hash": "ccb9f8bfe1d7d0c390b0e7c04226953a5eb457b7"
+          }
+        },
+        {
+          "client_id": "888180028544-g4adbqprthspfi04p99f8plgs51lb4ic.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firstapp",
+            "certificate_hash": "c041f4422344065f84b2ede8946c1e89b6bd113d"
+          }
+        },
+        {
+          "client_id": "888180028544-2v3vgr47hqp6pitu8k4fjaq7l07svi0o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5grVo_2cj_3HSl1CT1MGG4KV6sCJykRw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "888180028544-2v3vgr47hqp6pitu8k4fjaq7l07svi0o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "888180028544-1dsj4g7lp7km7q4it7if8inf49hmcc7o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.alphaGangstas.CoffeeCode"
+              }
             }
           ]
         }
