@@ -4,7 +4,6 @@ import 'package:firstapp/alarms.dart';
 import 'package:firstapp/coffee_data.dart';
 import 'package:firstapp/constants.dart';
 import 'package:firstapp/journal/journal.dart';
-import 'package:firstapp/login.dart';
 import 'package:firstapp/settings.dart';
 import 'package:firstapp/coff_and_code_info/info_menu.dart';
 import 'package:firstapp/video_list.dart';
@@ -36,13 +35,13 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'coffee and code',
-      home: LoginPage(),
+      home: MainPage(null),
     );
   }
 }
 
 class MainPage extends StatelessWidget {
-  final GoogleSignInAccount account;
+  final GoogleSignInAccount? account;
 
   MainPage(
     this.account, {
@@ -60,7 +59,9 @@ class MainPage extends StatelessWidget {
         appBar: AppBar(
             leading: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: GoogleUserCircleAvatar(identity: account),
+              child: (account != null
+                  ? GoogleUserCircleAvatar(identity: account!)
+                  : null),
             ),
             backgroundColor: Navy,
             title: Padding(
