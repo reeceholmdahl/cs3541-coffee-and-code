@@ -3,7 +3,8 @@ import 'information.dart';
 
 class Shop extends Information {
 
-  Shop(String title, String details, int type) : super(title, details, type) {
+  Shop(String title, List<String> info, int type) : super(title, type) {
+    super.details = detailsBuilder(info);
     decideAvatarProperties();
   }
 
@@ -11,16 +12,25 @@ class Shop extends Information {
     switch (type) {
       case 1:
         super.assignAvatarProperties(
-            Colors.red, Colors.red[100], Icons.local_fire_department);
+            Colors.green, Colors.green[100], Icons.link);
         break;
       case 2:
         super.assignAvatarProperties(
-            Colors.blueAccent, Colors.blue[100], Icons.ac_unit);
+            Colors.purple, Colors.purple[100], Icons.location_on);
         break;
       default:
         super.assignAvatarProperties(
             Colors.white, Colors.white, Icons.add_circle_outlined);
         break;
     }
+  }
+
+  String detailsBuilder(List<String> info) {
+    String shopInfo = "";
+    shopInfo += ("Address:\n" + info[0] + "\n\n");
+    shopInfo += ("Hours:\n" + info[1] + "\n\n");
+    shopInfo += ("Drive-through?\n" + info[2] + "\n\n");
+    shopInfo += ("Delivery?\n" + info[2] + "\n\n");
+    return shopInfo;
   }
 }

@@ -32,7 +32,7 @@ class AllInfo extends StatelessWidget {
             );
           },
           icon: Icon(Icons.favorite),
-          label: Text("Favorites"),
+          label: Text("Favorites", style: TextStyle(fontFamily: 'monospace')),
           backgroundColor: Navy,
         ),
         body: AllInfoList(title)
@@ -94,7 +94,8 @@ class _AllInfoListState extends State<AllInfoList> {
                             builder: (context) => InfoDetails(info: information)));
                   },
                   title: Text(information.title,
-                    style: TextStyle(fontWeight: FontWeight.bold)),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'monospace',)
+                  ),
                   leading: CircleAvatar(
                     child: Icon(
                       information.icon,

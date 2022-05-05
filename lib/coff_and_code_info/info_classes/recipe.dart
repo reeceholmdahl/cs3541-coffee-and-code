@@ -3,7 +3,8 @@ import 'information.dart';
 
 class Recipe extends Information {
 
-  Recipe(String title, String details, int type) : super(title, details, type) {
+  Recipe(String title, List<String> steps, int type) : super(title, type) {
+    super.details = detailsBuilder(steps);
     decideAvatarProperties();
   }
 
@@ -24,4 +25,14 @@ class Recipe extends Information {
         break;
     }
   }
+
+  String detailsBuilder(List<String> steps) {
+    String instructions = "";
+    for(int i = 0; i < steps.length; i++) {
+      instructions = instructions + "[" + i.toString() + "] " + steps[i] + "\n\n";
+    }
+    instructions += "\n   Enjoy! :)";
+    return instructions;
+  }
+
 }

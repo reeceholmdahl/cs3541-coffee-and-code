@@ -25,6 +25,7 @@ class InfoDetails extends StatelessWidget {
           style: TextStyle(
             fontSize: 20,
             color: White,
+            fontFamily: 'monospace',
           )
         ),
       )

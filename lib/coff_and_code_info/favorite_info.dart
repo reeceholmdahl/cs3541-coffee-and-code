@@ -35,7 +35,7 @@ class FavoriteInfo extends StatelessWidget {
               MaterialPageRoute(builder: (context) => AllInfo(title: title)),
             );
           },
-          label: Text("All"),
+          label: Text("All", style: TextStyle(fontFamily: 'monospace'),),
           icon: Icon(Icons.arrow_back),
           backgroundColor: Navy,
         )
@@ -126,7 +126,7 @@ class _FavoritesState extends State<Favorites> {
                   },
                   tileColor: Colors.grey,
                   title: Text(info.title,
-                    style: TextStyle(fontWeight: FontWeight.bold)),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'monospace')),
                   leading: CircleAvatar(
                     child: Icon(
                       info.icon,
@@ -138,7 +138,7 @@ class _FavoritesState extends State<Favorites> {
                   index: index,
                   child: Icon(
                     Icons.view_headline,
-                    color: Colors.blueGrey,
+                    color: Navy,
                   ),
                 )
                 ),
@@ -146,7 +146,6 @@ class _FavoritesState extends State<Favorites> {
               SizedBox(height: 5),
             ]
           );
-
         },
       )
     );

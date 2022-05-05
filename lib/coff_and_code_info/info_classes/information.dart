@@ -9,9 +9,8 @@ class Information {
   late Color? backgroundColor;
   late IconData? icon;
 
-  Information(String title, String details, int type) {
+  Information(String title, int type) {
     this.title = title;
-    this.details = details;
     this.type = type;
     this.isFavorited = false;
   }
@@ -29,4 +28,5 @@ class Information {
     this.backgroundColor = backgroundColor;
     this.icon = icon;
   }
+
 }

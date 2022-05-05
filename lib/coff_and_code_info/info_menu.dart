@@ -19,10 +19,10 @@ class InfoMenu extends StatelessWidget {
                             decoration: const BoxDecoration(
                               gradient: LinearGradient(
                                   colors: <Color>[
-                                    Color(0xff50342f),
+                                    Color(0xff4b312c),
                                     Color(0xff452e29),
                                     Color(0xff3E2723),
-                                    Color(0xff50342f),
+                                    Color(0xff4b312c),
                                   ]
                               ),
                             )
@@ -30,9 +30,9 @@ class InfoMenu extends StatelessWidget {
                     ),
                     TextButton(
                       style: TextButton.styleFrom(
-                        padding: const EdgeInsets.fromLTRB(40, 40, 40, 40),
+                        padding: const EdgeInsets.fromLTRB(50, 50, 50, 50),
                         primary: Color(0xffe3dad6),
-                        textStyle: const TextStyle(fontSize: 40),),
+                        textStyle: const TextStyle(fontSize: 34, fontFamily: 'monospace'),),
                       onPressed: () {
                         Navigator.push(
                             context,
@@ -64,9 +64,9 @@ class InfoMenu extends StatelessWidget {
                   ),
                   TextButton(
                     style: TextButton.styleFrom(
-                      padding: const EdgeInsets.fromLTRB(55, 40, 55, 40),
+                      padding: const EdgeInsets.fromLTRB(65, 50, 65, 50),
                       primary: Color(0xffFFFFFF),
-                      textStyle: const TextStyle(fontSize: 40),),
+                      textStyle: const TextStyle(fontSize: 35, fontFamily: 'monospace'),),
                     onPressed: (){
                       Navigator.push(
                           context,
@@ -98,9 +98,9 @@ class InfoMenu extends StatelessWidget {
                   ),
                   TextButton(
                     style: TextButton.styleFrom(
-                      padding: const EdgeInsets.fromLTRB(15, 40, 15, 40),
+                      padding: const EdgeInsets.fromLTRB(13, 50, 13, 50),
                       primary: Colors.lightGreen[400],
-                      textStyle: const TextStyle(fontSize: 40),),
+                      textStyle: const TextStyle(fontSize: 35, fontFamily: 'monospace'),),
                     onPressed: (){
                       Navigator.push(
                           context,
@@ -108,7 +108,7 @@ class InfoMenu extends StatelessWidget {
                               builder: (context) => AllInfo(title: 'Guidelines')));
                     },
                     child: const Text('Coding Guidelines'),
-                  )
+                  ),
                 ]
             ),
           ),
