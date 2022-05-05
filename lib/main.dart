@@ -4,6 +4,7 @@ import 'package:firstapp/coffee_data.dart';
 import 'package:firstapp/constants.dart';
 import 'package:firstapp/journal/journal.dart';
 import 'package:firstapp/settings.dart';
+import 'package:firstapp/coff_and_code_info/info_menu.dart';
 import 'package:firstapp/video_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -77,6 +78,10 @@ class Home extends StatelessWidget {
                   backgroundColor: Navy,
                   icon: const Icon(Icons.settings_sharp),
                   label: 'Settings'),
+              BottomNavigationBarItem(
+                backgroundColor: Navy,
+                icon: const Icon(Icons.zoom_in),
+                label: 'Information'),
             ],
           ),
           body: Builder(builder: (context) {
@@ -90,6 +95,8 @@ class Home extends StatelessWidget {
               return Alarms();
             } else if (pageIndex == 4) {
               return Settings();
+            } else if (pageIndex == 5) {
+              return InfoMenu();
             }
             throw UnimplementedError();
           }),

@@ -1,6 +1,7 @@
 import 'package:firstapp/side_drawer.dart';
 import 'package:flutter/material.dart';
 
+import 'package:firstapp/constants.dart';
 import 'info_classes/information.dart';
 import 'info_details.dart';
 import 'info_lists.dart';
@@ -14,8 +15,17 @@ class FavoriteInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Favorite ' + title)),
-        drawer: SideDrawer(),
+        appBar: AppBar(
+          backgroundColor: Navy,
+          title: Text("Favorite " + title,
+              style: TextStyle(
+                  color: White,
+                  fontFamily: 'monospace',
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold)),
+        ),
+        backgroundColor: Brown,
+        resizeToAvoidBottomInset: false,
         body: Favorites(title),
         floatingActionButton: FloatingActionButton.extended(
           onPressed: () {
@@ -27,6 +37,7 @@ class FavoriteInfo extends StatelessWidget {
           },
           label: Text("All"),
           icon: Icon(Icons.arrow_back),
+          backgroundColor: Navy,
         )
     );
   }
@@ -67,7 +78,7 @@ class _FavoritesState extends State<Favorites> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xffc9bdb6),
+        backgroundColor: Brown,
         body: ReorderableListView.builder(
           buildDefaultDragHandles: false,
           itemCount: favoritesList.length,
@@ -96,7 +107,7 @@ class _FavoritesState extends State<Favorites> {
                     SnackBar(content: Text("Removed from favorites")));
                 },
                 background: Container(
-                  color: Colors.red,
+                  color: Color(0xff9f1818),
                   alignment: Alignment.centerRight,
                   padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
                   child: Text("Remove",
@@ -113,7 +124,7 @@ class _FavoritesState extends State<Favorites> {
                       MaterialPageRoute(
                         builder: (context) => InfoDetails(info: info)));
                   },
-                  tileColor: Color(0xffefeae7),
+                  tileColor: Colors.grey,
                   title: Text(info.title,
                     style: TextStyle(fontWeight: FontWeight.bold)),
                   leading: CircleAvatar(

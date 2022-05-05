@@ -1,9 +1,9 @@
-import 'package:firstapp/side_drawer.dart';
 import 'package:flutter/material.dart';
 import 'info_classes/information.dart';
 import 'favorite_info.dart';
 import 'info_details.dart';
 import 'info_lists.dart';
+import 'package:firstapp/constants.dart';
 
 class AllInfo extends StatelessWidget {
   final String title;
@@ -13,9 +13,16 @@ class AllInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(title),
+          backgroundColor: Navy,
+          title: Text(title,
+              style: TextStyle(
+                  color: White,
+                  fontFamily: 'monospace',
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold)),
         ),
-        drawer: SideDrawer(),
+        backgroundColor: Brown,
+        resizeToAvoidBottomInset: false,
         floatingActionButton: FloatingActionButton.extended(
           onPressed: () {
             Navigator.pop(context);
@@ -26,6 +33,7 @@ class AllInfo extends StatelessWidget {
           },
           icon: Icon(Icons.favorite),
           label: Text("Favorites"),
+          backgroundColor: Navy,
         ),
         body: AllInfoList(title)
     );
@@ -68,6 +76,7 @@ class _AllInfoListState extends State<AllInfoList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Brown,
         body: ListView.builder(
             itemCount: infoList.length + 1,
             itemBuilder: (context, index) {
@@ -77,7 +86,7 @@ class _AllInfoListState extends State<AllInfoList> {
               Information information = infoList[index];
               return Card(
                 child: ListTile(
-                  tileColor: Color(0xffefeae7),
+                  tileColor: Colors.grey,
                   onTap: () {
                     Navigator.push(
                         context,
@@ -97,7 +106,7 @@ class _AllInfoListState extends State<AllInfoList> {
                     icon: information.isFavorited
                         ? Icon(Icons.favorite)
                         : Icon(Icons.favorite_border),
-                    color: information.isFavorited ? Color(0xff9f1818) : Colors.grey,
+                    color: information.isFavorited ? Color(0xff9f1818) : Navy,
                     onPressed: () {
                       setState(() {
                         information.switchFavorited();

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:firstapp/side_drawer.dart';
 import 'all_info.dart';
 
 class InfoMenu extends StatelessWidget {
@@ -7,12 +6,7 @@ class InfoMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Information'),
-      ),
-      drawer: SideDrawer(),
-      body: Center(child: Column(
+    return Center(child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -119,7 +113,7 @@ class InfoMenu extends StatelessWidget {
             ),
           ),
         ],
-      ),),
+      ),
     );
   }
 }
