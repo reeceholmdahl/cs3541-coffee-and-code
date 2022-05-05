@@ -6,6 +6,7 @@ import 'package:firstapp/constants.dart';
 import 'package:firstapp/journal/journal.dart';
 import 'package:firstapp/login.dart';
 import 'package:firstapp/settings.dart';
+import 'package:firstapp/coff_and_code_info/info_menu.dart';
 import 'package:firstapp/video_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -57,21 +58,20 @@ class MainPage extends StatelessWidget {
         restorationId: 'coffee and code',
         backgroundColor: Brown,
         appBar: AppBar(
-          leading: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: GoogleUserCircleAvatar(identity: account),
-          ),
-          backgroundColor: Navy,
-          title: Padding(
-            padding: const EdgeInsets.only(left: 16.0),
-            child: const Text("coffee && code;",
-                style: TextStyle(
-                    color: White,
-                    fontFamily: 'monospace',
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold)),
-          ),
-        ),
+            leading: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: GoogleUserCircleAvatar(identity: account),
+            ),
+            backgroundColor: Navy,
+            title: Padding(
+              padding: const EdgeInsets.only(left: 16.0),
+              child: const Text("coffee && code;",
+                  style: TextStyle(
+                      color: White,
+                      fontFamily: 'monospace',
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold)),
+            )),
         bottomNavigationBar: BottomNavigationBar(
           selectedLabelStyle: TextStyle(fontFamily: 'monospace'),
           unselectedLabelStyle: TextStyle(fontFamily: 'monospace'),
@@ -103,6 +103,10 @@ class MainPage extends StatelessWidget {
                 backgroundColor: Navy,
                 icon: const Icon(Icons.settings_sharp),
                 label: 'Settings'),
+            BottomNavigationBarItem(
+                backgroundColor: Navy,
+                icon: const Icon(Icons.zoom_in),
+                label: 'Information'),
           ],
         ),
         body: Builder(builder: (context) {
@@ -116,6 +120,8 @@ class MainPage extends StatelessWidget {
             return Alarms();
           } else if (pageIndex == 4) {
             return Settings();
+          } else if (pageIndex == 5) {
+            return InfoMenu();
           }
           throw UnimplementedError();
         }),
