@@ -132,7 +132,7 @@ class CoffeeJournal extends StatelessWidget {
               Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: Color.fromRGBO(157, 180, 165, 100),
+                primary: WashedRed,
                 fixedSize: const Size(100, 60),
               ),
               child: Text(
@@ -159,7 +159,7 @@ class CoffeeJournal extends StatelessWidget {
             Padding(padding: EdgeInsets.only(left: 20)),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: Color.fromRGBO(157, 180, 165, 100),
+                primary: Tan,
                 fixedSize: const Size(220, 60),
               ),
               child: Text(

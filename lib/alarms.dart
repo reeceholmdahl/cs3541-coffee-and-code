@@ -1,4 +1,5 @@
 import 'dart:core';
+import 'package:firstapp/constants.dart';
 import 'package:flutter_alarm_clock/flutter_alarm_clock.dart';
 import 'package:numberpicker/numberpicker.dart';
 import 'package:flutter/material.dart';
@@ -74,15 +75,14 @@ class AlarmsState extends State<Alarms> {
           const SizedBox(height: 10),
           //adjust heights
           AlarmIcon(),
-          const SizedBox(height: 300),
+          const SizedBox(height: 200),
           //edit this and change format of button
 
           new Align(
               alignment: Alignment.bottomCenter,
               child: IconButton(
                 icon: const Icon(Icons.add_circle_rounded),
-                color:
-                    Theme.of(context).floatingActionButtonTheme.backgroundColor,
+                color: WashedRed,
                 iconSize: 100,
                 onPressed: () {
                   buildNewAlarmPopup(context);
@@ -258,7 +258,7 @@ class AlarmIcon extends StatelessWidget {
       children: [
         IconButton(
           icon: const Icon(Icons.access_alarms),
-          color: Colors.pink,
+          color: WashedNavy,
           iconSize: 200.0,
           onPressed: () {
             FlutterAlarmClock.showAlarms();

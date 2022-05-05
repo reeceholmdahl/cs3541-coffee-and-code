@@ -57,14 +57,20 @@ class MainPage extends StatelessWidget {
         restorationId: 'coffee and code',
         backgroundColor: Brown,
         appBar: AppBar(
+          leading: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: GoogleUserCircleAvatar(identity: account),
+          ),
           backgroundColor: Navy,
-          title: const Center(
-              child: Text("coffee && code;",
-                  style: TextStyle(
-                      color: White,
-                      fontFamily: 'monospace',
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold))),
+          title: Padding(
+            padding: const EdgeInsets.only(left: 16.0),
+            child: const Text("coffee && code;",
+                style: TextStyle(
+                    color: White,
+                    fontFamily: 'monospace',
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold)),
+          ),
         ),
         bottomNavigationBar: BottomNavigationBar(
           selectedLabelStyle: TextStyle(fontFamily: 'monospace'),

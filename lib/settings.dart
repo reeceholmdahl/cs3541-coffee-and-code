@@ -1,4 +1,5 @@
 import 'dart:core';
+import 'package:firstapp/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:app_settings/app_settings.dart';
 
@@ -16,51 +17,66 @@ class _SettingsState extends State<Settings> {
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
-          ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                primary: Color.fromRGBO(157, 180, 165, 100),
-                fixedSize: const Size(180, 60),
-              ),
-              child: Text("App Settings"),
-              onPressed: () {
-                AppSettings.openAppSettings();
-              }),
-          ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                primary: Color.fromRGBO(157, 180, 165, 100),
-                fixedSize: const Size(180, 60),
-              ),
-              child: Text("Display Settings"),
-              onPressed: () {
-                AppSettings.openDisplaySettings();
-              }),
-          ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                primary: Color.fromRGBO(157, 180, 165, 100),
-                fixedSize: const Size(180, 60),
-              ),
-              child: Text("Notification Settings"),
-              onPressed: () {
-                AppSettings.openNotificationSettings();
-              }),
-          ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                primary: Color.fromRGBO(157, 180, 165, 100),
-                fixedSize: const Size(180, 60),
-              ),
-              child: Text("Sound Settings"),
-              onPressed: () {
-                AppSettings.openSoundSettings();
-              }),
-          ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                primary: Color.fromRGBO(157, 180, 165, 100),
-                fixedSize: const Size(180, 60),
-              ),
-              child: Text("Battery Settings"),
-              onPressed: () {
-                AppSettings.openBatteryOptimizationSettings();
-              }),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 24, 0, 8),
+            child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: WashedNavy,
+                  fixedSize: const Size(180, 60),
+                ),
+                child: Text("App Settings"),
+                onPressed: () {
+                  AppSettings.openAppSettings();
+                }),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8),
+            child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: WashedNavy,
+                  fixedSize: const Size(180, 60),
+                ),
+                child: Text("Display Settings"),
+                onPressed: () {
+                  AppSettings.openDisplaySettings();
+                }),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8),
+            child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: WashedNavy,
+                  fixedSize: const Size(180, 60),
+                ),
+                child: Text("Notification Settings"),
+                onPressed: () {
+                  AppSettings.openNotificationSettings();
+                }),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8),
+            child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: WashedNavy,
+                  fixedSize: const Size(180, 60),
+                ),
+                child: Text("Sound Settings"),
+                onPressed: () {
+                  AppSettings.openSoundSettings();
+                }),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8),
+            child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: WashedNavy,
+                  fixedSize: const Size(180, 60),
+                ),
+                child: Text("Battery Settings"),
+                onPressed: () {
+                  AppSettings.openBatteryOptimizationSettings();
+                }),
+          ),
         ],
       ),
     );
